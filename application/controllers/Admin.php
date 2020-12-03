@@ -19,7 +19,7 @@ class Admin extends CI_Controller
         $this->load->view('admin/home/index', $data);
         $this->load->view('admin/templates/footer');
     }
-    public function x()
+    public function b()
     {
         $data['judul'] = "Dashboard";
         $data['nama'] = "Tuhan";
