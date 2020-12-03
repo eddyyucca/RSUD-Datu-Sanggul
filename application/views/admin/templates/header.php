@@ -25,11 +25,11 @@
       <!-- Sidebar -->
       <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('dev') ?>">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('admin') ?>">
           <div class="sidebar-brand-icon">
             <img src="<?= base_url('assets/img/rsud_datu_sanggul.png'); ?>" width="50" height="50" alt="RSUD Datu Sanggul">
           </div>
-          <div class="sidebar-brand-text mx-3">RSUD</div>
+          <div class="sidebar-brand-text mx-3">RSUD Datu Sanggul</div>
         </a>
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
@@ -43,15 +43,41 @@
         <!-- Nav Item - Pages Collapse Menu -->
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#data" aria-expanded="true" aria-controls="data">
             <i class="fas fa-database"></i>
             <span>Data Master</span>
           </a>
-          <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div id="data" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="<?= base_url('atk/view_data') ?>">Profil RSUD</a>
-              <a class="collapse-item" href="<?= base_url('atk/view_data') ?>">Data Dokter</a>
-              <a class="collapse-item" href="<?= base_url('atk/view_data') ?>">Data Kamara</a>
+              <a class="collapse-item" href="<?= base_url('admin/profil_rsud') ?>">Profil RSUD</a>
+              <a class="collapse-item" href="<?= base_url('admin/info_dokter') ?>">Data Dokter</a>
+              <a class="collapse-item" href="<?= base_url('admin/info_kamar') ?>">Data Kamar</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Gallery" aria-expanded="true" aria-controls="Gallery">
+            <i class="fas fa-images"></i>
+            <span>Media</span>
+          </a>
+          <div id="Gallery" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="<?= base_url('admin/profil_rsud') ?>">Gallery</a>
+              <a class="collapse-item" href="<?= base_url('admin/info_dokter') ?>">Video</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#post" aria-expanded="true" aria-controls="post">
+            <i class="fas fa-paragraph"></i>
+            <span>Blog</span>
+          </a>
+          <div id="post" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="<?= base_url('admin/info_dokter') ?>">Berita Baru</a>
+              <a class="collapse-item" href="<?= base_url('admin/profil_rsud') ?>">Semua Berita</a>
             </div>
           </div>
         </li>
