@@ -14,6 +14,7 @@
   Custom styles for this template -->
   <link href="<?= base_url('assets') ?>/admin/css/sb-admin-2.min.css" rel="stylesheet">
   <link href="<?= base_url('assets') ?>/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="<?= base_url('assets') ?>/ckeditor5/sample/css/sample.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -52,6 +53,7 @@
               <a class="collapse-item" href="<?= base_url('admin/profil_rsud') ?>">Profil RSUD</a>
               <a class="collapse-item" href="<?= base_url('admin/info_dokter') ?>">Data Dokter</a>
               <a class="collapse-item" href="<?= base_url('admin/info_kamar') ?>">Data Kamar</a>
+              <a class="collapse-item" href="<?= base_url('admin/info_kamar') ?>">Jadwal Poliklinik</a>
             </div>
           </div>
         </li>
@@ -69,6 +71,18 @@
           </div>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#post" aria-expanded="true" aria-controls="post">
+            <i class="fas fa-paragraph"></i>
+            <span>Blog</span>
+          </a>
+          <div id="post" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="<?= base_url('admin/info_dokter') ?>">Berita Baru</a>
+              <a class="collapse-item" href="<?= base_url('admin/profil_rsud') ?>">Semua Berita</a>
+            </div>
+          </div>
+        </li>
         <li class="nav-item">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#post" aria-expanded="true" aria-controls="post">
             <i class="fas fa-paragraph"></i>
