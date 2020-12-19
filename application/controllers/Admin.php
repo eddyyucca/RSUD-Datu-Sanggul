@@ -56,14 +56,23 @@ class Admin extends CI_Controller
         $this->load->view('admin/templates/footer');
     }
 
-
     public function post()
     {
-        $data['judul'] = "Dashboard";
-        $data['nama'] = "Developer";
-        $this->load->view('admin/templates/header', $data);
-        $this->load->view('admin/profil_rsud/index', $data);
-        $this->load->view('admin/templates/footer');
+        $this->form_validation->set_rules('nama_bidang', 'Bidang', 'required');
+        if ($this->form_validation->run() == FALSE) {
+            $data['judul'] = "Dashboard";
+            $data['nama'] = "Developer";
+            $this->load->view('admin/templates/header', $data);
+            $this->load->view('admin/profil_rsud/index', $data);
+            $this->load->view('admin/templates/footer');
+        } else {
+
+            $data['judul'] = "Dashboard";
+            $data['nama'] = "Developer";
+            $this->load->view('admin/templates/header', $data);
+            $this->load->view('admin/profil_rsud/index', $data);
+            $this->load->view('admin/templates/footer');
+        }
     }
 
     public function post_baru()
@@ -72,6 +81,15 @@ class Admin extends CI_Controller
         $data['nama'] = "Developer";
         $this->load->view('admin/templates/header', $data);
         $this->load->view('admin/post/post_baru', $data);
+        $this->load->view('admin/templates/footer');
+    }
+
+    public function data_poli()
+    {
+        $data['judul'] = "Dashboard";
+        $data['nama'] = "Developer";
+        $this->load->view('admin/templates/header', $data);
+        $this->load->view('admin/poli/data_poli', $data);
         $this->load->view('admin/templates/footer');
     }
 }

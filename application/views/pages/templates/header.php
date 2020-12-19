@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="<?= base_url('assets'); ?>/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?= base_url('assets'); ?>/css/lity.min.css" />
     <link rel="stylesheet" href="<?= base_url('assets'); ?>/css/aos.css" />
-    <link rel="icon" type="image/x-icon" href="<?= base_url('assets'); ?>/img/ico.ico" />
+    <link rel="icon" type="image/x-icon" href="<?= base_url('assets'); ?>/img/favicon.ico" />
     <script data-search-pseudo-elements defer src="<?= base_url('assets'); ?>/js/all.min.js" crossorigin="anonymous"></script>
     <script src="<?= base_url('assets'); ?>/js/feather.min.js" crossorigin="anonymous">
     </script>

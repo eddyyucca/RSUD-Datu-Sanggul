@@ -12,7 +12,7 @@
                 <div class="card-header">Post Baru</div>
                 <div class="card-body">
 
-                    <form action="{{ route('post.store') }} " method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url('admin/') ?>" method="post" enctype="multipart/form-data">
                         <script>
                             function readURL(input) {
                                 if (input.files && input.files[0]) {
@@ -43,7 +43,7 @@
                     </form>
                     <!-- script text post -->
                     <script src="<?= base_url('assets') ?>/ckeditor/ckeditor.js"></script>
-                    sudo snap install postman
+
                     <script>
                         var konten = document.getElementById("konten");
                         CKEDITOR.replace(konten, {

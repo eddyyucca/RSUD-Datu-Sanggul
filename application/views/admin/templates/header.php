@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+
   <title><?= $judul; ?></title>
   <!-- Custom fonts for this template-->
   <link href="<?= base_url('assets') ?>/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -15,6 +16,7 @@
   <link href="<?= base_url('assets') ?>/admin/css/sb-admin-2.min.css" rel="stylesheet">
   <link href="<?= base_url('assets') ?>/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
   <link href="<?= base_url('assets') ?>/ckeditor5/sample/css/sample.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="<?= base_url('assets'); ?>/img/favicon.ico" />
 </head>
 
 <body id="page-top">
@@ -53,6 +55,7 @@
               <a class="collapse-item" href="<?= base_url('admin/profil_rsud') ?>">Profil RSUD</a>
               <a class="collapse-item" href="<?= base_url('admin/info_dokter') ?>">Data Dokter</a>
               <a class="collapse-item" href="<?= base_url('admin/info_kamar') ?>">Data Kamar</a>
+              <a class="collapse-item" href="<?= base_url('admin/data_poli') ?>">Data Poli</a>
               <a class="collapse-item" href="<?= base_url('admin/info_kamar') ?>">Jadwal Poliklinik</a>
             </div>
           </div>
