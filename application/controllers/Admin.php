@@ -8,7 +8,7 @@ class Admin extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        // $this->load->model('admin_model');
+        $this->load->model('admin_m');
         // $this->load->model('');
     }
 
@@ -16,10 +16,12 @@ class Admin extends CI_Controller
     {
         $data['judul'] = "Dashboard";
         $data['nama'] = "Developer";
+
         $this->load->view('admin/templates/header', $data);
         $this->load->view('admin/home/index', $data);
         $this->load->view('admin/templates/footer');
     }
+
     public function info_dokter()
     {
         $data['judul'] = "Dashboard";

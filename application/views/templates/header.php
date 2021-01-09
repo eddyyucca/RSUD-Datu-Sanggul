@@ -29,7 +29,7 @@
                     <div class="container">
 
                         <a href="<?= base_url(''); ?>/Home">
-                            <img src="<?= base_url('assets/') ?>img/rsud_datu_sanggul.png" alt="rsud_datusanggul" width="70" />
+                            <img src="<?= base_url('home') ?>img/rsud_datu_sanggul.png" alt="rsud_datusanggul" width="70" />
                         </a>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,9 +38,9 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto mr-lg-5">
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('assets'); ?>/Home" style="color:white">Home
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('home'); ?>" style="color:white">Home
                                     </a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('assets'); ?>/It_solution" style="color:white">Info Dokter </a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('info_dokter'); ?>" style="color:white">Info Dokter </a></li>
                                 <li class="nav-item"><a class="nav-link" href="<?= base_url('assets'); ?>/Startup_group" style="color:white">Info Kamar </a>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="<?= base_url('assets'); ?>/Techno_class" style="color:white">Jadwal POLIKLINIK</a></li>

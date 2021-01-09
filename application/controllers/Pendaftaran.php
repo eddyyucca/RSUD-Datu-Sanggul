@@ -5,9 +5,9 @@ class Pendaftaran extends CI_Controller
 {
     public function index()
     {
-        $this->load->view('pages/templates/header');
-        $this->load->view('pages/pendaftaran_antri');
-        $this->load->view('pages/templates/footer');
+        $this->load->view('home/templates/header');
+        $this->load->view('home/pendaftaran_antri');
+        $this->load->view('home/templates/footer');
     }
 }
     

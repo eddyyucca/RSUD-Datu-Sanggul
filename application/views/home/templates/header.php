@@ -38,14 +38,14 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto mr-lg-5">
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('assets'); ?>/Home" style="color:white">Home
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('home'); ?>" style="color:white">Home
                                     </a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('assets'); ?>/It_solution" style="color:white">Info Dokter </a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('assets'); ?>/Startup_group" style="color:white">Info Kamar </a>
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('info_dokter'); ?>" style="color:white">Info Dokter </a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url(''); ?>/Startup_group" style="color:white">Info Kamar </a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('assets'); ?>/Techno_class" style="color:white">Jadwal POLIKLINIK</a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('assets'); ?>/Techno_class" style="color:white">Artikel</a></li>
-
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url(''); ?>/Techno_class" style="color:white">Jadwal POLIKLINIK</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('blog'); ?>" style="color:white">Artikel</a></li>
+                                <a class="btn font-weight-500 ml-lg-4 btn-teal" href="<?= base_url('Login'); ?>">Login<i class="ml-2" data-feather="arrow-right"></i></a>
                             </ul>
                             <!-- <i class="btn btn-outline-white px-4 ml-lg-4" href="#">Daftar Rawat Jalan<i class="fas fa-arrow-right ml-1"></i></a> -->
                         </div>
