@@ -1,6 +1,5 @@
-<body class="bg-gradient-success">
+<body>
     <div class="mbr-slider slide carousel" data-keyboard="false" data-ride="carousel" data-interval="2000" data-pause="true">
-
         <div class="container">
             <!-- Outer Row -->
             <div class="row justify-content-center">
@@ -12,7 +11,6 @@
                                 <div class="col-lg">
                                     <div class="p-5">
                                         <div class="text-center">
-
                                             <img class="mb-3" src="<?= base_url('assets/img/rsud_datu_sanggul.png') ?>" width="100px">
                                             <h3>Rumah Sakit Umum Daerah
                                                 <br>Datu Sanggul Rantau

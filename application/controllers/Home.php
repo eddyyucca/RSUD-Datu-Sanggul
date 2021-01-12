@@ -7,12 +7,12 @@ class Home extends CI_Controller
     {
         parent::__construct();
         $this->load->model('home_m');
-        $this->load->model('admin_m');
+        $this->load->model('user_m');
         // $this->load->model('');
     }
     public function index()
     {
-        $data['data'] = $this->admin_m->pasien();
+        $data['data'] = $this->user_m->pasien();
         $this->load->view('home/templates/header');
         $this->load->view('home/home', $data);
         $this->load->view('home/templates/footer');
