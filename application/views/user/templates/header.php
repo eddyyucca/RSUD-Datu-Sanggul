@@ -28,7 +28,7 @@
       <!-- Sidebar -->
       <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('admin') ?>">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('user') ?>">
           <div class="sidebar-brand-icon">
             <img src="<?= base_url('assets/img/rsud_datu_sanggul.png'); ?>" width="50" height="50" alt="RSUD Datu Sanggul">
           </div>
@@ -45,21 +45,6 @@
         </div>
         <!-- Nav Item - Pages Collapse Menu -->
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#data" aria-expanded="true" aria-controls="data">
-            <i class="fas fa-database"></i>
-            <span>Data Master</span>
-          </a>
-          <div id="data" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="<?= base_url('admin/profil_rsud') ?>">Profil RSUD</a>
-              <a class="collapse-item" href="<?= base_url('admin/info_dokter') ?>">Data Dokter</a>
-              <a class="collapse-item" href="<?= base_url('admin/info_kamar') ?>">Data Kamar</a>
-              <a class="collapse-item" href="<?= base_url('admin/data_poli') ?>">Data Poli</a>
-              <a class="collapse-item" href="<?= base_url('admin/info_kamar') ?>">Jadwal Poliklinik</a>
-            </div>
-          </div>
-        </li>
 
         <li class="nav-item">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Gallery" aria-expanded="true" aria-controls="Gallery">
@@ -68,8 +53,8 @@
           </a>
           <div id="Gallery" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="<?= base_url('admin/profil_rsud') ?>">Gallery</a>
-              <a class="collapse-item" href="<?= base_url('admin/info_dokter') ?>">Video</a>
+              <a class="collapse-item" href="<?= base_url('user/profil_rsud') ?>">Gallery</a>
+              <a class="collapse-item" href="<?= base_url('user/info_dokter') ?>">Video</a>
             </div>
           </div>
         </li>
@@ -81,23 +66,12 @@
           </a>
           <div id="post" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="<?= base_url('admin/info_dokter') ?>">Berita Baru</a>
-              <a class="collapse-item" href="<?= base_url('admin/profil_rsud') ?>">Semua Berita</a>
+              <a class="collapse-item" href="<?= base_url('user/post') ?>">Semua Berita</a>
+              <a class="collapse-item" href="<?= base_url('user/post_baru') ?>">Berita Baru</a>
             </div>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#post" aria-expanded="true" aria-controls="post">
-            <i class="fas fa-paragraph"></i>
-            <span>Blog</span>
-          </a>
-          <div id="post" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="<?= base_url('admin/info_dokter') ?>">Berita Baru</a>
-              <a class="collapse-item" href="<?= base_url('admin/profil_rsud') ?>">Semua Berita</a>
-            </div>
-          </div>
-        </li>
+
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
         <!-- Divider -->
@@ -154,6 +128,9 @@
               </li>
             </ul>
           </nav>
+
+
+
           <!-- End of Topbar -->
 
           <!-- end menu -->

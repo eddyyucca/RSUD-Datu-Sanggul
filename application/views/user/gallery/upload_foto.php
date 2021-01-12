@@ -26,7 +26,7 @@
                             }
                         </script>
                         <div class="d-flex justify-content-center">
-                            <img class="img-account-profile img-fluid border mb-2" src="<?= base_url('assets') ?> /img/image.jpg" id="blah" alt="" />
+                            <img class="img-account-profile img-fluid border mb-2" src="<?= base_url('assets/img/upload.jpg') ?>" id="blah" alt="Images" />
                         </div>
                         <!-- Profile picture upload button-->
                         <hr class="mb-1">

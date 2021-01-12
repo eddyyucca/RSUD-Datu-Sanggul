@@ -7,11 +7,8 @@
         <div class="card-body">
             <div class="table-responsive">
                 <div class="container">
-                    <a href="<?= base_url('Akun/tambah_akun') ?>" class="btn btn-danger">Tambah Akun</a>
+                    <a href="<?= base_url('user/post_baru') ?>" class="btn btn-success">Post Baru</a>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
-                        Print Excel
-                    </button>
                     <hr>
                     <div class="container">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

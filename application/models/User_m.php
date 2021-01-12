@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Admin_m extends CI_Model
+class User_m extends CI_Model
 {
 
     public function pasien()
@@ -18,4 +18,4 @@ class Admin_m extends CI_Model
     }
 }
 
-/* End of file Admin_model.php */
+/* End of file User_m.php */

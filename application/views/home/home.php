@@ -42,7 +42,7 @@
                         </div> <!-- /col-md-4 -->
 
                     </div>
-                    <hr>
+                    <!-- <hr>
                     <div class="row">
                         <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 text-center">
                             <a class="page-scroll">
@@ -53,7 +53,7 @@
                                     <p> MALAM : 11.00 – 13.00 WITA</p>
                                 </div>
                             </a>
-                        </div> <!-- /col-md-4 -->
+                        </div> 
                         <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 text-center">
                             <a class="page-scroll">
                                 <div class="alert alert-success" role="alert">
@@ -63,8 +63,9 @@
                                     <p> MALAM : 11.00 – 13.00 WITA</p>
                                 </div>
                             </a>
-                        </div> <!-- /col-md-4 -->
-                    </div>
+                        </div>
+                    </div> -->
+
                 </div>
             </div>
 
