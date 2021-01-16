@@ -28,7 +28,7 @@
                         <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 text-center">
                             <div class="home-plans well">
                                 <div class="alert alert-success" role="alert">
-                                    <h4 class="alert-heading">SMS CENTER | (0811 )555420 SMS & Whatsapp</h4>
+                                    <h4 class="alert-heading">SMS CENTER | (0811)555420 SMS & Whatsapp</h4>
                                 </div>
                             </div> <!-- /well -->
                         </div> <!-- /col-md-4 -->

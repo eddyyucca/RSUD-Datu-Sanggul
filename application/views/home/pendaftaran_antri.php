@@ -1,65 +1,31 @@
 <header class="page-header page-header-light bg-white">
-    <div class="page-header-content">
-        <div class="container">
-            <div class="col-lg mt-4 mb-0">
+    <div class="container col-md-6 col-lg-4">
+        <div class="card mt-5">
+            <div class="card-header">
+            </div>
+            <div class="card-body">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 text-center">
-                        <a class="page-scroll" href="#how-to">
-                            <div class="alert alert-success" role="alert">
-                                <h5 class="alert-heading">Call Center | (0517) 31075</h5>
+                    <div class="container-fluid">
+                        <?= validation_errors() ?>
+                        <form action="<?= base_url('pendaftaran/data_pasien') ?>" method="POST">
+                            <div class="form-group">
+                                <label for="no_rm">Nomor Rekam Medis</label>
+                                <input type="number" class="form-control" id="no_rm" name="rm" placeholder="Nomor Rekam Medis">
                             </div>
-                        </a>
-                    </div> <!-- /col-md-4 -->
-                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 text-center">
-                        <div class="home-plans well">
-                            <div class="alert alert-success" role="alert">
-                                <h5 class="alert-heading">Gawat Darurat | (0517) 31112</h5>
+                            <div class="form-group">
+                                <label for="date">Tanggal Lahir</label>
+                                <input type="date" class="form-control" id="date" name="ttl">
                             </div>
-                        </div> <!-- /well -->
-                    </div> <!-- /col-md-4 -->
-                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 text-center">
-                        <div class="home-plans well">
-                            <div class="alert alert-success" role="alert">
-                                <h5 class="alert-heading">SMS CENTER | (0811 )555420 SMS & Whatsapp</h5>
+                            <hr>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-success">Cari Pasien</button>
                             </div>
-                        </div> <!-- /well -->
-                    </div> <!-- /col-md-4 -->
-                </div>
-                <hr>
-
-                <div class="page-header-content">
-                    <div class="container">
-                        <div class="col-lg mt-4 mb-0">
-                            <section class="bg-light py-10">
-                                <div class="container">
-
-
-                                    <div class="row">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="no_rm">Nomor Rekam Medis</label>
-                                                <input type="number" class="form-control" id="no_rm" name="on_rm">
-                                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="date">Email</label>
-                                                <input type="date" class="form-control" id="date" name="date">
-                                            </div>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Cari</button>
-                                        </form>
-                                    </div>
-                                </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </header>
 
 

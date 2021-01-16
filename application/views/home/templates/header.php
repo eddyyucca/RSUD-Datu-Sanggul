@@ -27,11 +27,9 @@
             <main>
                 <nav class="navbar navbar-marketing navbar-expand-lg bg-primary navbar-dark fixed-top">
                     <div class="container">
-
                         <a href="<?= base_url('home'); ?>">
-                            <img src="<?= base_url('assets/') ?>img/rsud_datu_sanggul.png" alt="rsud_datusanggul" width="70" />
+                            <img src="<?= base_url('assets/') ?>img/rsud_datu_sanggul.png" alt="rsud_datusanggul" width=50 />
                         </a>
-
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <i data-feather="menu"></i>
                         </button>
@@ -51,3 +49,5 @@
                         </div>
                     </div>
                 </nav>
+            </main>
+        </div>

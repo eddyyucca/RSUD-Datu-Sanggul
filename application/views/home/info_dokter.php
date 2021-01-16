@@ -19,7 +19,7 @@
                                         <?php
                 foreach ($data as $x) { ?>
                                             <tr>
-                                                <td><?= $x->nm_dokter?></td>
+                                                <td><?= $x->nm_dokter ?></td>
                                                 <td>Senin-Minggu</td>
                                                 <td>08:00 - 18:00</td>
                                                                                            </tr>
@@ -51,5 +51,4 @@
             <a class="btn btn-outline-orange btn-marketing " href="#!">Hubungi Kami</a>
         </div>
     </div>
-
 </section>
