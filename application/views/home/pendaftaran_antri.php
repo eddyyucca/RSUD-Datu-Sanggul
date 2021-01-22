@@ -10,11 +10,11 @@
                         <form action="<?= base_url('pendaftaran/data_pasien') ?>" method="POST">
                             <div class="form-group">
                                 <label for="no_rm">Nomor Rekam Medis</label>
-                                <input type="number" class="form-control" id="no_rm" name="rm" placeholder="Nomor Rekam Medis">
+                                <input type="number" class="form-control" required id="no_rm" name="rm" placeholder="Nomor Rekam Medis">
                             </div>
                             <div class="form-group">
                                 <label for="date">Tanggal Lahir</label>
-                                <input type="date" class="form-control" id="date" name="ttl">
+                                <input type="date" class="form-control" required id="date" name="ttl">
                             </div>
                             <hr>
                             <div class="text-center">

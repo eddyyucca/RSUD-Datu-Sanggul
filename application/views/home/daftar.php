@@ -7,37 +7,48 @@
                 <div class="row">
                     <div class="container-fluid">
                         <?= validation_errors() ?>
-                        <table border="0">
-                            <tr>
-                                <td>Nama Pasien</td>
-                                <td>:</td>
-                                <td><?= $data_pasien->nm_pasien ?></td>
-                            </tr>
-                            <tr>
-                                <td>Tanggal Lahir</td>
-                                <td>:</td>
-                                <td><?= $data_pasien->tgl_lahir ?></td>
-                            </tr>
-                            <tr>
-                                <td>Alamat</td>
-                                <td>:</td>
-                                <td><?= $data_pasien->alamat ?></td>
-                            </tr>
-                            <tr>
-                                <td>Poliklinik Tujuan</td>
-                                <td>:</td>
-                                <td><?= $poli ?></td>
-                            </tr>
-                            <tr>
-                                <td>No Antrian</td>
-                                <td>:</td>
-                                <td><?= $noantri ?></td>
-                            </tr>
-                        </table>
-                        <hr>
-                        <div class="text-center">
-                            <a href="" class="btn btn-success">Cetak Antrian</a>
-                        </div>
+                        <?php if ($data_pasien == false) { ?>
+                            <h1>Data Tidak Ditemukan</h1>
+                        <?php   } elseif ($data_pasien == true) { ?>
+
+
+                            <table border="0">
+                                <tr>
+                                    <td>Nama Pasien</td>
+                                    <td>:</td>
+                                    <td><?= $data_pasien->nm_pasien ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Tanggal Lahir</td>
+                                    <td>:</td>
+                                    <td><?= $data_pasien->tgl_lahir ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Alamat</td>
+                                    <td>:</td>
+                                    <td><?= $data_pasien->alamat ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Tanggal daftar</td>
+                                    <td>:</td>
+                                    <td><?= $tgl_berobat ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Poliklinik Tujuan</td>
+                                    <td>:</td>
+                                    <td><?= $poli ?></td>
+                                </tr>
+                                <tr>
+                                    <td>No Antrian</td>
+                                    <td>:</td>
+                                    <td><?= $noantri ?></td>
+                                </tr>
+                            </table>
+                            <hr>
+                            <div class="text-center">
+                                <a href="<?= base_url('pendaftaran/daftar/cetak') ?>" class="btn btn-success">Cetak Antrian</a>
+                            </div>
+                        <?php    } ?>
                     </div>
                 </div>
             </div>
