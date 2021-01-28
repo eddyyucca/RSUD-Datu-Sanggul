@@ -42,29 +42,7 @@
                         </div> <!-- /col-md-4 -->
 
                     </div>
-                    <!-- <hr>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 text-center">
-                            <a class="page-scroll">
-                                <div class="alert alert-success" role="alert">
-                                    <h4 class="alert-heading">WAKTU KUNJUNGAN BESUK</h4>
-                                    <p>
-                                        PAGI : 11.00 – 13.00 WITA</p>
-                                    <p> MALAM : 11.00 – 13.00 WITA</p>
-                                </div>
-                            </a>
-                        </div> 
-                        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 text-center">
-                            <a class="page-scroll">
-                                <div class="alert alert-success" role="alert">
-                                    <h4 class="alert-heading">HARI MINGGU & LIBUR</h4>
-                                    <p> PAGI : 11.00 – 13.00 WITA</p>
-                                    <hr>
-                                    <p> MALAM : 11.00 – 13.00 WITA</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div> -->
+
 
                 </div>
             </div>
@@ -81,11 +59,20 @@
 </header>
 <section class="bg-light py-10">
     <div class="container">
-        <a class="card post-preview post-preview-featured lift mb-5" href="#!">
+
+        <div data-mc-src="453149c3-e690-42a0-adee-d57c9d78e2d1"></div>
+
+        <script src="https://cdn2.woxo.tech/a.js#6010c3427e1f560015b71756" async data-usrc>
+        </script>
+
+
+        <a class="card post-preview post-preview-featured lift mb-5 mt-3" href="#!">
             <div class="row no-gutters">
                 <div class="col-lg-5">
                     <div class="post-preview-featured-img" style='background-image: url("https://source.unsplash.com/vZJdYl5JVXY/660x360")'></div>
                 </div>
+
+
                 <div class="col-lg-7">
                     <div class="card-body">
                         <div class="py-5">

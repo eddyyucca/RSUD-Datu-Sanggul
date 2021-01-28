@@ -15,6 +15,11 @@
                                     <td><?= $data_pasien->nm_pasien ?></td>
                                 </tr>
                                 <tr>
+                                    <td>No Rekam Medis</td>
+                                    <td>:</td>
+                                    <td><?= $data_pasien->no_rkm_medis ?></td>
+                                </tr>
+                                <tr>
                                     <td>Tanggal Lahir</td>
                                     <td>:</td>
                                     <td><?= $data_pasien->tgl_lahir ?></td>

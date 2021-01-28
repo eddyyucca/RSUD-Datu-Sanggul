@@ -19,6 +19,11 @@
                                     <td><?= $data_pasien->nm_pasien ?></td>
                                 </tr>
                                 <tr>
+                                    <td>No Rekam Medis</td>
+                                    <td>:</td>
+                                    <td><?= $data_pasien->no_rkm_medis ?></td>
+                                </tr>
+                                <tr>
                                     <td>Tanggal Lahir</td>
                                     <td>:</td>
                                     <td><?= $data_pasien->tgl_lahir ?></td>
@@ -46,7 +51,7 @@
                             </table>
                             <hr>
                             <div class="text-center">
-                                <a href="<?= base_url('pendaftaran/daftar/cetak') ?>" class="btn btn-success">Cetak Antrian</a>
+                                <a href="<?= base_url('pendaftaran/daftar/') . $data_pasien->no_rkm_medis ?>" class="btn btn-success">Cetak Antrian</a>
                             </div>
                         <?php    } ?>
                     </div>

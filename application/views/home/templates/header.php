@@ -19,6 +19,9 @@
     <script data-search-pseudo-elements defer src="<?= base_url('assets'); ?>/js/all.min.js" crossorigin="anonymous"></script>
     <script src="<?= base_url('assets'); ?>/js/feather.min.js" crossorigin="anonymous">
     </script>
+
+    <link rel="stylesheet" href="<?= base_url('assets/mobiris'); ?>/instagram-feed/style.css" />
+    <script src="<?= base_url('assets/mobiris'); ?>/instagram-feed/index.js"></script>
 </head>
 
 <body>
