@@ -7,11 +7,11 @@ class Pendaftaran extends CI_Controller
         parent::__construct();
         $this->load->model('home_m');
         $this->load->helper('tgl_indo');
-        // $this->load->library('Pdf');
     }
 
     public function index()
     {
+        $data['pesan'] = false;
         $data['poliklinik'] = $this->home_m->poliklinik();
         $this->load->view('home/templates/header');
         $this->load->view('home/pendaftaran_antri', $data);
@@ -41,38 +41,49 @@ class Pendaftaran extends CI_Controller
         $tgl = $this->input->post('tgl_berobat');
         $rm = $this->input->post('rm');
 
-        $data['data_pasien'] = $this->home_m->get_pasien_row($rm);
+        $result_tgl = preg_replace("/[-]/", "", $tgl);
 
-        $tahun = substr($tgl, 0, 4);
-        $bulan = substr($tgl, 5, 2);
-        $tgl = substr($tgl, 8, 2);
+        if (date("Ymd") > $result_tgl) {
+            $data['pesan'] = "Pendaftaran hari ini sudah di tutup";
+            return redirect('pendaftaran/index', $data);
+        } elseif (date("H") >= "11") {
+            $data['pesan'] = "Pendaftaran hari sudah lewat waktu";
+            return redirect('pendaftaran/index', $data);
+        } else {
+            $data['data_pasien'] = $this->home_m->get_pasien_row($rm);
+            $tahun = substr($tgl, 0, 4);
+            $bulan = substr($tgl, 5, 2);
+            $tgl = substr($tgl, 8, 2);
 
-        if ($tgl == false) {
-            $tanggal = date('Y-m-d');
-        } elseif ($tgl == true) {
+            // if ($tgl == false) {
+            //     $tanggal = date('Y-m-d');
+            // } elseif ($tgl == true) {
             $tanggal = $tahun . "-" . $bulan . "-" . $tgl;
-        }
+            // }
 
-        $data['tgl_berobat'] = longdate_indo($tanggal);
-        $str = file_get_contents('http://192.168.11.83:8081/qumatic/standard/api/intkiosk?id=0&date=' . $tanggal);
-        $json = json_decode($str, true);
-        $data['noantri'] = $json['data'];
-        $data['poli'] = $this->input->post('poli');
+            $data['tgl_berobat'] = longdate_indo($tanggal);
+            $str = file_get_contents('http://192.168.11.83:8081/qumatic/standard/api/intkiosk?id=0&date=' . $tanggal);
+            $json = json_decode($str, true);
+            $data['noantri'] = $json['data'];
+            $data['poli'] = $this->input->post('poli');
 
-        if ($rm == false) {
+            // if ($rm == false) {
             $this->load->view('home/templates/header');
             $this->load->view('home/daftar', $data);
             $this->load->view('home/templates/footer');
-        } elseif ($rm == true) {
-            $pdf = $this->load->library('Pdf');           // $pdf->allow_charset_conversion = true;
-            // $pdf->charset_in = 'UTF-8';
-            $this->load->view('home/cetak_antrian', $data, true);
-            // $pdf->WriteHTML($html);
-            // $output = 'Q' . $rm . date('Y_m_d_H_i_s') . '.pdf';
-            // $pdf->Output("$output", 'I');
+            // } elseif ($rm == true) {
+            //     $pdf = $this->load->library('Pdf');           // $pdf->allow_charset_conversion = true;
+            //     // $pdf->charset_in = 'UTF-8';
+            //     $this->load->view('home/cetak_antrian', $data, true);
+            //     // $pdf->WriteHTML($html);
+            //     // $output = 'Q' . $rm . date('Y_m_d_H_i_s') . '.pdf';
+            //     // $pdf->Output("$output", 'I');
+
+
         }
     }
 }
+
 
     
 /* End of file Controllername.php */

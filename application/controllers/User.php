@@ -78,11 +78,18 @@ class User extends CI_Controller
     // }
     public function post()
     {
-        $data['judul'] = "Dashboard";
-        $data['nama'] = "Eddy Adha Saputra";
-        $this->load->view('user/templates/header', $data);
-        $this->load->view('user/post/index', $data);
-        $this->load->view('user/templates/footer');
+        $this->form_validation->set_rules('nama_bidang', 'Bidang', 'required');
+        if () {
+
+
+            $data['judul'] = "Dashboard";
+            $data['nama'] = "Eddy Adha Saputra";
+            $this->load->view('user/templates/header', $data);
+            $this->load->view('user/post/index', $data);
+            $this->load->view('user/templates/footer');
+        } else {
+            # code...
+        }
     }
 
     public function post_baru()

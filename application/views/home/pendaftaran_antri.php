@@ -6,6 +6,10 @@
             <div class="card-body">
                 <div class="row">
                     <div class="container-fluid">
+                        <?php if ($pesan == true) {
+                            echo $pesan;
+                        } elseif ($pesan == true) {
+                        } ?>
                         <?= validation_errors() ?>
                         <form action="<?= base_url('pendaftaran/data_pasien') ?>" method="POST">
                             <div class="form-group">
