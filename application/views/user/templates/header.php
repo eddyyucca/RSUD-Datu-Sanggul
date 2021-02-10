@@ -66,7 +66,7 @@
           </a>
           <div id="post" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="<?= base_url('user/post') ?>">Semua Berita</a>
+              <a class="collapse-item" href="<?= base_url('user/berita') ?>">Semua Berita</a>
               <a class="collapse-item" href="<?= base_url('user/post_baru') ?>">Berita Baru</a>
             </div>
           </div>

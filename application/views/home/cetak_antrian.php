@@ -1,18 +1,37 @@
-<div class="row mb1">
-    <div class="col-sm-12">
-        <h4 class="ttl color-black border-midnightblue"><span>PENDAFTARAN RAWAT JALAN</span></h4>
-        <?php
-        $message = $this->session->flashdata('_msg');
-        if ($message == '') {
-            echo '';
-        } else {
-            echo '<div class="alert alert-info">' . $message . '</div>';
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="<?= base_url('assets'); ?>/img/favicon.ico" />
+    <title>Antrian No <?= $noantri ?></title>
+    <style>
+        th .a {
+            height: 50px;
+            padding-left: 10px;
+            vertical-align: top;
+
         }
-        ?>
-        <div class="well">
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="panel panel-default shadow" id="print-area">
+
+        table {
+            border-collapse: collapse;
+            padding: 2px;
+        }
+
+        tr .bungkus {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table border="3" class="c">
+            <tr>
+                <th>
+                    <table>
                         <div class="panel-body">
                             <p style="margin-bottom: 5px;text-align: center;"><strong>RSUD DATU SANGGUL - RANTAU</strong></p>
                             <div style="border-bottom: 1px dotted rgba(127, 140, 141,0.8);"></div>
@@ -20,27 +39,27 @@
                                 <tbody>
 
                                     <tr>
-                                        <td>Tanggal Daftar</td>
+                                        <td align="left">Tanggal Daftar</td>
                                         <td>:</td>
-                                        <td><?php echo $tgl_berobat; ?></td>
+                                        <td align="left"><?php echo $tgl_berobat; ?></td>
                                     </tr>
                                     <tr>
-                                        <td>No. RM</td>
+                                        <td align="left">No. RM</td>
                                         <td>:</td>
-                                        <td><?php echo $data_pasien->no_rkm_medis; ?></td>
+                                        <td align="left"><?php echo $data_pasien->no_rkm_medis; ?></td>
                                     </tr>
                                     <tr>
-                                        <td>Nama Pasien</td>
+                                        <td align="left">Nama Pasien</td>
                                         <td>:</td>
-                                        <td><?php echo $data_pasien->nm_pasien; ?></td>
+                                        <td align="left"><?php echo $data_pasien->nm_pasien; ?></td>
                                     </tr>
                                     <tr>
-                                        <td>Poli tujuan :</td>
+                                        <td align="left">Poli tujuan</td>
                                         <td>:</td>
-                                        <td><strong><?php echo $poli; ?></strong></td>
+                                        <td align="left"><strong><?php echo $poli_tujuan; ?></strong></td>
                                     </tr>
                                     <tr>
-                                        <td>Nomor Antrian Anda</td>
+                                        <td align="left">Nomor Antrian Anda</td>
                                         <td>:</td>
                                         <td>
                                             <h1 style="margin-top:0px;margin-bottom:0px;font-size: 40px; text-align: center"><strong id="nomor"><?php echo $noantri; ?></strong></h1>
@@ -58,20 +77,15 @@
                                 ?>
                             </p>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-offset-1 col-sm-6">
-                    <div class="popover top">
-                        <div class="arrow"></div>
-                        <div class="popover-content">
-                            <ul>
-                                <li>Simpan atau screenshoot halaman ini sebagai bukti nomor antrian Anda.</li>
-                                <li>Mohon perlihatkan foto/pdf nomor antrian kepada petugas loket saat nomor Anda dipanggil.</li>
-                            </ul>
-                        </div>
-                    </div><br>
-                </div>
-            </div>
-        </div>
+                    </table>
+                </th>
+            </tr>
+        </table>
     </div>
-</div>
+</body>
+
+<script>
+    window.print()
+</script>
+
+</html>

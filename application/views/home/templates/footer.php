@@ -29,10 +29,10 @@
 </script>
 <script src="<?= base_url('assets'); ?>/js/scripts.js"></script>
 <script src="<?= base_url('assets'); ?>/js/owl.carousel.min.js"></script>
-
 <script src="<?= base_url('assets'); ?>/js/scripts_count.js"></script>
 <script src="<?= base_url('assets'); ?>/js/lity.min.js"></script>
 <script src="<?= base_url('assets'); ?>/js/aos.js"></script>
+
 
 <script>
     AOS.init({

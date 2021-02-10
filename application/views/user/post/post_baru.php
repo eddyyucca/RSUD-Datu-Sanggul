@@ -12,7 +12,7 @@
                 <div class="card-header">Post Baru</div>
                 <div class="card-body">
 
-                    <form action="<?= base_url('admin/') ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url('user/post') ?>" method="post" enctype="multipart/form-data">
                         <script>
                             function readURL(input) {
                                 if (input.files && input.files[0]) {
@@ -35,11 +35,11 @@
                             Upload image
                         </label>
                         <span class='label label-info' id="upload-file-info"></span>
-                        <input type="text" name="judul" class="form-control" name="judul" vid="judul" placeholder="Judul" required>
+                        <input type="text" class="form-control" name="judul_berita" placeholder="Judul">
                         <br>
-                        <textarea id="konten" class="form-control" name="konten" rows="100" cols="100"></textarea>
+                        <textarea id="konten" class="form-control" name="isi_berita" rows="100" cols="100"></textarea>
                         <br>
-                        <button class="btn btn-primary">Simpan</button>
+                        <button class="btn btn-primary" type="submit">Simpan</button>
                     </form>
                     <!-- script text post -->
                     <script src="<?= base_url('assets') ?>/ckeditor/ckeditor.js"></script>
