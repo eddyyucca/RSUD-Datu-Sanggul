@@ -202,8 +202,8 @@ if (!function_exists('longdate_indo')) {
     }
 }
 
-//nama hari saja
-if (!function_exists('longdate_indo')) {
+//Long date indo Format
+if (!function_exists('nama_hari')) {
     function nama_hari($tanggal)
     {
         $ubah = gmdate($tanggal, time() + 60 * 60 * 8);
@@ -213,10 +213,7 @@ if (!function_exists('longdate_indo')) {
         $thn = $pecah[0];
         $bulan = bulan($pecah[1]);
 
-        $nama = date(
-            "l",
-            mktime(0, 0, 0, $bln, $tgl, $thn)
-        );
+        $nama = date("l", mktime(0, 0, 0, $bln, $tgl, $thn));
         $nama_hari = "";
         if ($nama == "Sunday") {
             $nama_hari = "Minggu ";

@@ -1,7 +1,8 @@
 <header class="page-header page-header-light bg-white">
     <div class="page-header-content">
         <div class="container">
-            <div class="row align-items-center mt-4" data-aos="fade-up">
+            <div class="row align-items-center mt-4">
+                <!-- data-aos="fade-up" -->
                 <div class="col-lg-6">
                     <h2>Rumah Sakit Umum Daerah</h2>
                     <h1 class="page-header-title">RSUD Datu Sanggul</h1>

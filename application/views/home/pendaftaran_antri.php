@@ -20,7 +20,6 @@
                                 <label for="date">Tanggal Lahir</label>
                                 <input type="date" class="form-control" required id="date" name="ttl">
                             </div>
-                            <hr>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-success">Cari Pasien</button>
                             </div>

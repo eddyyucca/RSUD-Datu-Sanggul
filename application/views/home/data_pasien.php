@@ -34,9 +34,14 @@
                             <form action="<?= base_url('pendaftaran/daftar') ?>" method="POST">
                                 <input type="hidden" name="rm" value="<?= $data_pasien->no_rkm_medis ?>">
                                 <input type="hidden" name="poli" value="<?= $poli ?>">
-                                <div class="form-group">
+
+                                <div class="form-group date">
                                     <label for="date">Tanggal Berobat</label>
-                                    <input type="date" class="form-control" id="date" name="tgl_berobat">
+                                    <div class="input-group date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                        <input class="form-control" size="16" name="tgl_berobat" type="text" value="--TANGGAL BEROBAT--">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="date">Poliklinik</label>

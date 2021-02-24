@@ -7,30 +7,18 @@ class Login extends CI_Controller
     public function index()
     {
         $data['data'] = false;
-
         $data['judul'] = 'RSUDDS - Login';
         $this->load->view('login/template_auth/header', $data);
         $this->load->view('login/index', $data);
         $this->load->view('login/template_auth/footer', $data);
     }
 
-    public function user_login()
-    {
-        $data['data'] = false;
-        $data['pesan'] = $this->session->flashdata('pesan');
-        $data['judul'] = 'Login User';
-        $this->load->view('auth/template_auth/header', $data);
-        $this->load->view('auth/user_login', $data);
-        $this->load->view('auth/template_auth/footer', $data);
-    }
-
-    public function auth_admin()
+    public function auth()
     {
         $this->form_validation->set_rules('nip', 'NIP Pegawai', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
         if ($this->form_validation->run() == FALSE) {
             $data['data'] = false;
-
             $data['judul'] = 'Login';
             $this->load->view('auth/template/header', $data);
             $this->load->view('auth/index', $data);

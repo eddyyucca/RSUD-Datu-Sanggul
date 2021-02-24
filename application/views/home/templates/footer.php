@@ -25,20 +25,26 @@
 </div>
 </div>
 <script src="<?= base_url('assets'); ?>/js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-<script src="<?= base_url('assets'); ?>/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-</script>
+<script src="<?= base_url('assets'); ?>/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="<?= base_url('assets'); ?>/js/scripts.js"></script>
 <script src="<?= base_url('assets'); ?>/js/owl.carousel.min.js"></script>
 <script src="<?= base_url('assets'); ?>/js/scripts_count.js"></script>
 <script src="<?= base_url('assets'); ?>/js/lity.min.js"></script>
 <script src="<?= base_url('assets'); ?>/js/aos.js"></script>
-
-
+<script src="<?= base_url('assets'); ?>/datepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="<?= base_url('assets'); ?>/datepicker/js/locales/bootstrap-datetimepicker.fr.js"></script>
 <script>
-    AOS.init({
-        disable: 'mobile',
-        duration: 600,
-        once: true
+    $('.form_date').datetimepicker({
+        language: 'id',
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0,
+        startDate: new Date(),
+        daysOfWeekDisabled: [0, 7]
     });
 </script>
 </body>

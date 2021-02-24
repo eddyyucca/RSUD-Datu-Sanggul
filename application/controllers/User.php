@@ -10,6 +10,7 @@ class User extends CI_Controller
         parent::__construct();
         $this->load->model('user_m');
         $this->load->library('form_validation');
+        $this->load->helper(array('form', 'url'));
         // $this->load->model('');
     }
 
@@ -93,31 +94,28 @@ class User extends CI_Controller
             $url_sum = $this->user_m->hitung_berita($url);
             $url_berita = $url . "-" . $url_sum;
 
-            $config['upload_path']   = './assets/foto_berita/';
-            $config['allowed_types'] = 'jpg|png|jpeg';
-            $config['remove_space']  = TRUE;
-            // $config['max_size']      = 100;
-            $config['overwrite']     = true;
-            // $config['max_width']     = 1024;
-            // $config['max_height']    = 768;
-
+            $config['upload_path']   = './assets/foto/';
+            $config['allowed_types'] = 'gif|jpg|png';
+            $config['remove_space'] = TRUE;
+            //$config['max_size']      = 100; 
+            //$config['max_width']     = 1024; 
+            //$config['max_height']    = 768;  
             $this->load->library('upload', $config);
             // script upload file 1
-            $this->upload->do_upload('foto');
+            $this->upload->do_upload('foto_berita');
             $x = $this->upload->data();
 
-            var_dump($x);
 
-            // $data = array(
-            //     'url' => $url_berita,
-            //     'judul_berita' => $this->input->post('judul_berita'),
-            //     'isi_berita' => $this->input->post('isi_berita'),
-            //     'foto_berita' =>  $x["orig_name"],
-            //     'date_berita' => date("Y-m-d")
-            // );
+            $data = array(
+                'url' => $url_berita,
+                'judul_berita' => $this->input->post('judul_berita'),
+                'isi_berita' => $this->input->post('isi_berita'),
+                'foto_berita' =>  $x["orig_name"],
+                'date_berita' => date("Y-m-d")
+            );
 
-            // $this->db->insert('blog', $data);
-            // return redirect('user/berita');
+            $this->db->insert('blog', $data);
+            return redirect('user/berita');
         }
     }
 

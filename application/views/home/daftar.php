@@ -6,12 +6,9 @@
             <div class="card-body">
                 <div class="row">
                     <div class="container-fluid">
-                        <?= validation_errors() ?>
                         <?php if ($data_pasien == false) { ?>
                             <h1>Data Tidak Ditemukan</h1>
                         <?php   } elseif ($data_pasien == true) { ?>
-
-
                             <table border="0">
                                 <tr>
                                     <td>Nama Pasien</td>
