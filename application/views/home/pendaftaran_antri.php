@@ -8,7 +8,7 @@
                     <div class="container-fluid">
                         <?php if ($pesan == true) {
                             echo $pesan;
-                        } elseif ($pesan == true) {
+                        } elseif ($pesan == false) {
                         } ?>
                         <?= validation_errors() ?>
                         <form action="<?= base_url('pendaftaran/data_pasien') ?>" method="POST">

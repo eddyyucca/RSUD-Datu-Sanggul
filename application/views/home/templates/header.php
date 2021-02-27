@@ -30,32 +30,30 @@
 </head>
 
 <body>
-    <div id="layoutDefault">
-        <div id="layoutDefault_content">
-            <main>
-                <nav class="navbar navbar-marketing navbar-expand-lg bg-primary navbar-dark fixed-top">
-                    <div class="container">
-                        <a href="<?= base_url('home'); ?>">
-                            <img src="<?= base_url('assets/') ?>img/rsud_datu_sanggul.png" alt="rsud_datusanggul" width=50 />
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <i data-feather="menu"></i>
-                        </button>
+    <div id="layoutDefault_content">
+        <main>
+            <nav class="navbar navbar-marketing navbar-expand-lg bg-primary navbar-dark fixed-top">
+                <div class="container">
+                    <a href="<?= base_url('home'); ?>">
+                        <img src="<?= base_url('assets/') ?>img/rsud_datu_sanggul.png" alt="rsud_datusanggul" width=50 />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i data-feather="menu"></i>
+                    </button>
 
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto mr-lg-5">
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('home'); ?>" style="color:white">Home
-                                    </a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('info_dokter'); ?>" style="color:white">Info Dokter </a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url(''); ?>/Startup_group" style="color:white">Info Kamar </a>
-                                </li>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mr-lg-5">
+                            <li class="nav-item"><a class="nav-link" href="<?= base_url('home'); ?>" style="color:white">Home
+                                </a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?= base_url('info_dokter'); ?>" style="color:white">Info Dokter </a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?= base_url(''); ?>/Startup_group" style="color:white">Info Kamar </a>
+                            </li>
 
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('blog'); ?>" style="color:white">Artikel</a></li>
-                                <a class="btn font-weight-500 ml-lg-4 btn-teal" href="<?= base_url('Login'); ?>"><b>Login</b> <i class="ml-2" data-feather="arrow-right"></i></a>
-                            </ul>
-                            <!-- <i class="btn btn-outline-white px-4 ml-lg-4" href="#">Daftar Rawat Jalan<i class="fas fa-arrow-right ml-1"></i></a> -->
-                        </div>
+                            <li class="nav-item"><a class="nav-link" href="<?= base_url('blog'); ?>" style="color:white">Artikel</a></li>
+                            <a class="btn font-weight-500 ml-lg-4 btn-teal" href="<?= base_url('Login'); ?>"><b>Login</b> <i class="ml-2" data-feather="arrow-right"></i></a>
+                        </ul>
+                        <!-- <i class="btn btn-outline-white px-4 ml-lg-4" href="#">Daftar Rawat Jalan<i class="fas fa-arrow-right ml-1"></i></a> -->
                     </div>
-                </nav>
-            </main>
-        </div>
+                </div>
+            </nav>
+        </main>

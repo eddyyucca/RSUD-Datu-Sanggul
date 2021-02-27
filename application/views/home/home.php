@@ -67,7 +67,7 @@
         </script>
 
 
-        <a class="card post-preview post-preview-featured lift mb-5 mt-3" href="#!">
+        <!-- <a class="card post-preview post-preview-featured lift mb-5 mt-3" href="#!">
             <div class="row no-gutters">
                 <div class="col-lg-5">
                     <div class="post-preview-featured-img" style='background-image: url("https://source.unsplash.com/vZJdYl5JVXY/660x360")'></div>
@@ -217,7 +217,7 @@
                     <a class="page-link" href="#!" aria-label="Next"><span aria-hidden="true">»</span></a>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
     </div>
 </section>
 

@@ -31,21 +31,17 @@
                                                 <option value="Perempuan">KEPEGAWAIAN</option>
                                             </select>
                                         </div>
-
                                         <div class="form-group mb-4">
                                             <div class="form-group mb-4">
                                                 <input type="text" class="form-control" name="nip" placeholder="NIP Pegawai">
                                             </div>
                                         </div>
-
                                         <div class="form-group mb-4">
                                             <input type="password" class="form-control" name="password" placeholder="Password">
                                         </div>
-
                                         <button type="submit" class="btn btn-success btn-user btn-block">
                                             Masuk
                                         </button>
-
                                     </form>
                                     <hr>
                                 </div>

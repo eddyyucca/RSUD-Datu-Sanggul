@@ -22,12 +22,12 @@
 
 <body>
 
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5 mt-5">
         <!-- 404 Error Text -->
-        <div class="text-center">
+        <div class="text-center mt-5">
             <div class="error mx-auto" data-text="404">404</div>
-            <p class="lead text-gray-800 mb-5">Page Not Found</p>
+            <p class="lead text-gray-800 mb-5">Halaman Tidak Ditemukan</p>
 
-            <a href="<?= base_url('/') ?>">&larr; Back to Home</a>
+            <a href="<?= base_url('/') ?>">&larr; Kembali Ke berandas</a>
         </div>
     </div>

@@ -57,13 +57,20 @@
                                 </div>
                             </form>
                         <?php  } elseif ($data_pasien == false) { ?>
-                            <h1>Data Tidak Ditemukan</h1>
-                            <a href="<?= base_url('pendaftaran') ?>" class="btn btn-success">Kembali Lakukan Pendaftaran</a>
-                        <?php } ?>
+                            <div class="text-center">
+                                <div class='alert alert-danger' role='alert'>
+                                    <h1>Data Tidak Ditemukan !</h1>
+                                </div>
+                                <a href="<?= base_url('pendaftaran') ?>" class="btn btn-success">Kembali Lakukan Pendaftaran</a>
+                            </div>
+
                     </div>
+
+                <?php } ?>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </header>
 

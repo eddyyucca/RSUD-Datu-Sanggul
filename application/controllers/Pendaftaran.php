@@ -12,7 +12,7 @@ class Pendaftaran extends CI_Controller
     public function index()
     {
         $data['pesan'] = false;
-        $data['poliklinik'] = $this->home_m->poliklinik();
+
         $this->load->view('home/templates/header');
         $this->load->view('home/pendaftaran_antri', $data);
         $this->load->view('home/templates/footer');
@@ -52,7 +52,7 @@ class Pendaftaran extends CI_Controller
             if (date("H") < "11") {
                 $data['data_pasien'] = $this->home_m->get_pasien_row($rm);
                 $data['tgl_berobat'] = longdate_indo($tanggal);
-                $str = file_get_contents('http://192.168.11.213:8081/qumatic/standard/api/intkiosk?id=0&date=' . $tanggal);
+                $str = file_get_contents('http://192.168.11.73:8081/qumatic/standard/api/intkiosk?id=0&date=' . $tanggal);
                 $json = json_decode($str, true);
                 $data['noantri'] = $json['data'];
                 $data['poli'] = $this->input->post('poli');
@@ -60,15 +60,19 @@ class Pendaftaran extends CI_Controller
                 $this->load->view('home/templates/header');
                 $this->load->view('home/daftar', $data);
                 $this->load->view('home/templates/footer');
-            } elseif (date("H") > "11") {
-                $data['pesan'] = "<div class='alert alert-success' role='alert'>Akun Berhasil Dibuat  !
-        </div>";
-                redirect('pendaftaran', $data);
+            } else {
+                $data['pesan'] = "<div class='alert alert-danger' role='alert'>Jam pendaftaran sudah lewat, silahkan daftar tanggal besok  !
+                </div>";
+
+
+                $this->load->view('home/templates/header');
+                $this->load->view('home/pendaftaran_antri', $data);
+                $this->load->view('home/templates/footer');
             }
         } elseif ($result_tgl > date("Ymd")) {
             $data['data_pasien'] = $this->home_m->get_pasien_row($rm);
             $data['tgl_berobat'] = longdate_indo($tanggal);
-            $str = file_get_contents('http://192.168.11.213:8081/qumatic/standard/api/intkiosk?id=0&date=' . $tanggal);
+            $str = file_get_contents('http://192.168.11.73:8081/qumatic/standard/api/intkiosk?id=0&date=' . $tanggal);
             $json = json_decode($str, true);
             $data['noantri'] = $json['data'];
             $data['poli'] = $this->input->post('poli');
