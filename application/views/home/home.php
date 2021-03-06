@@ -9,7 +9,7 @@
                     <!-- <p class="page-header-text mb-5">Kabupaten Tapin
                     </p> -->
                     <hr>
-                    <a href="<?= base_url('pendaftaran') ?>" class="btn btn-primary btn-lg">Pendaftaran Rawat Jalan</a>
+                    <a href="<?= base_url('pendaftaran') ?>" class="btn btn-primary btn-lg btn-block">Pendaftaran Rawat Jalan</a>
                 </div>
                 <div class="col-lg-6 d-none d-lg-block"><img class="img-fluid" src="<?= base_url('assets'); ?>/img/dokter.png" />
                 </div>

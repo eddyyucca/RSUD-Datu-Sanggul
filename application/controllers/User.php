@@ -94,7 +94,7 @@ class User extends CI_Controller
             $url_sum = $this->user_m->hitung_berita($url);
             $url_berita = $url . "-" . $url_sum;
 
-            $config['upload_path']   = './assets/foto/';
+            $config['upload_path']   = './assets/foto_berita/';
             $config['allowed_types'] = 'gif|jpg|png';
             $config['remove_space'] = TRUE;
             //$config['max_size']      = 100; 
@@ -104,7 +104,6 @@ class User extends CI_Controller
             // script upload file 1
             $this->upload->do_upload('foto_berita');
             $x = $this->upload->data();
-
 
             $data = array(
                 'url' => $url_berita,
