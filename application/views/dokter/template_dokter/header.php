@@ -17,9 +17,34 @@
   <link href="<?= base_url('assets') ?>/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
   <link href="<?= base_url('assets') ?>/ckeditor5/sample/css/sample.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="<?= base_url('assets'); ?>/img/favicon.ico" />
+  <style type="text/css">
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background-color: #fff;
+    }
+
+    .preloader .loading {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font: 14px arial;
+    }
+  </style>
 </head>
 
 <body id="page-top">
+  <div class="preloader">
+    <div class="loading">
+      <img src="<?= base_url('assets/gif/preload.gif') ?>" width="80">
+      <p>Harap Tunggu</p>
+    </div>
+  </div>
   <!-- menu -->
 
   <body id="page-top">
@@ -52,7 +77,8 @@
           </a>
           <div id="data" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="<?= base_url('dokter/data_tanggal') ?>">Jadwal Dokter</a>
+              <a class="collapse-item" href="<?= base_url('dokter/data_tanggal') ?>">Jadwal Dokter POLI</a>
+              <a class="collapse-item" href="<?= base_url('dokter/data_tanggal') ?>">Jadwal Dokter IGD</a>
             </div>
           </div>
         </li>

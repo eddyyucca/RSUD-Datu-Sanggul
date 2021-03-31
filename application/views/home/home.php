@@ -5,7 +5,7 @@
                 <!-- data-aos="fade-up" -->
                 <div class="col-lg-6">
                     <h2>Rumah Sakit Umum Daerah</h2>
-                    <h1 class="page-header-title">RSUD Datu Sanggul</h1>
+                    <h1 class="page-header-title">Datu Sanggul-Tapin</h1>
                     <!-- <p class="page-header-text mb-5">Kabupaten Tapin
                     </p> -->
                     <hr>
@@ -219,18 +219,4 @@
             </ul>
         </nav> -->
     </div>
-</section>
-
-<section class="bg-img-cover overlay overlay-light overlay-80 py-15" style='background-image: url("<?= base_url("assets/img/ruangbedah.jpg") ?>"); background-attachment:fixed;'>
-    <div class="container z-1">
-        <div class="mt-5">
-            <div class="display-4 mb-3 text-dark">Siap melayani anda sepenuh hati</div>
-            <a class="btn btn-outline-orange btn-marketing " href="#!">Hubungi Kami</a>
-        </div>
-    </div>
-    <!-- <div class="svg-border-angled text-black">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" fill="currentColor">
-            <polygon points="0,100 100,0 100,100"></polygon>
-        </svg>
-    </div> -->
 </section>

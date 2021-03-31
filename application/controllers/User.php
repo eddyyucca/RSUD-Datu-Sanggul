@@ -100,9 +100,9 @@ class User extends CI_Controller
             //$config['max_height']    = 768;  
             $this->load->library('upload', $config);
             // script upload file 1
-            $this->upload->do_upload('foto_berita');
+            $this->upload->do_upload('foto');
             $x = $this->upload->data();
-
+            var_dump($x);
             $data = array(
                 'url' => $url_berita,
                 'judul_berita' => $this->input->post('judul_berita'),
@@ -111,11 +111,17 @@ class User extends CI_Controller
                 'date_berita' => date("Y-m-d")
             );
 
-            $this->db->insert('blog', $data);
+            $this->db->insert('web_blog', $data);
             return redirect('user/berita');
         }
     }
 
+    public function hapus_berita($id_berita)
+    {
+        $this->db->where('id_berita', $id_berita);
+        $this->db->delete('web_blog');
+        return redirect('user/berita');
+    }
     public function berita()
     {
         $data['judul'] = "Dashboard";

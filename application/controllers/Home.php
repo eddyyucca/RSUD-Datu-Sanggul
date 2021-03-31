@@ -17,6 +17,14 @@ class Home extends CI_Controller
         $this->load->view('home/home', $data);
         $this->load->view('home/templates/footer');
     }
+
+    public function pwa()
+    {
+
+        // $this->load->view('home/templates/header');
+        $this->load->view('index');
+        // $this->load->view('home/templates/footer');
+    }
 }
 
 /* End of file Home.php */

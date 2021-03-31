@@ -63,6 +63,11 @@
    <!-- Page level custom scripts -->
    <script src="<?= base_url('assets') ?>/admin/js/demo/chart-area-demo.js"></script>
    <script src="<?= base_url('assets') ?>/admin/js/demo/chart-pie-demo.js"></script>
+   <script>
+     $(document).ready(function() {
+       $(".preloader").fadeOut();
+     })
+   </script>
    </body>
 
    </html>

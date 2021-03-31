@@ -6,19 +6,18 @@
         <div class="card-body">
             <div class="table-responsive">
                 <div class="container">
-                    <form action="<?= base_url('dokter/tambah_dokter/' . $id_tgl) ?>" method="POST">
+                    <form action="<?= base_url('dokter/edit_dokter/') . $data->id_jadwal_dokter ?>" method="POST">
                         <table class="table">
                             <tr>
-                                <input type="hidden" name="id_tgl_dokter" value="<?= $id_tgl ?>">
                                 <td width=20%>Waktu Masuk</td>
                                 <td>
-                                    <input type="time" name="waktu_masuk" class="form-control">
+                                    <input type="time" name="waktu_masuk" value="<?= $data->waktu_masuk ?>" class="form-control">
                                 </td>
                             </tr>
                             <tr>
                                 <td width=20%>Waktu Pulang</td>
                                 <td>
-                                    <input type="time" name="waktu_keluar" class="form-control">
+                                    <input type="time" name="waktu_keluar" value="<?= $data->waktu_keluar ?>" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -27,7 +26,8 @@
                                     <select class="form-control" name="id_dokter">
                                         <option value="">-- PILIH DOKTER --</option>
                                         <?php foreach ($dokter as $dkt) { ?>
-                                            <option value="<?= $dkt->kd_dokter ?>"><?= $dkt->nm_dokter ?></option>
+
+                                            <option value="<?= $dkt->kd_dokter ?>" <?= $dkt->kd_dokter  == $data->kd_dokter ? 'selected=selected' : ''; ?>><?= $dkt->nm_dokter ?></option>
                                         <?php   } ?>
                                     </select>
                                 </td>

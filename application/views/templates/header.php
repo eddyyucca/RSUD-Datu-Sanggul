@@ -45,7 +45,7 @@
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="<?= base_url('assets'); ?>/Techno_class" style="color:white">Jadwal POLIKLINIK</a></li>
                                 <li class="nav-item"><a class="nav-link" href="<?= base_url('assets'); ?>/Techno_class" style="color:white">Artikel</a></li>
-
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('assets'); ?>/Techno_class" style="color:white">Profil Rumah Sakit</a></li>
                             </ul>
                             <!-- <i class="btn btn-outline-white px-4 ml-lg-4" href="#">Daftar Rawat Jalan<i class="fas fa-arrow-right ml-1"></i></a> -->
                         </div>

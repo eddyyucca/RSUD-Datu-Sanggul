@@ -19,7 +19,7 @@ class User_m extends CI_Model
     public function post_berita()
     {
         $this->db->order_by('id_berita', 'DESC');
-        return  $this->db->get('blog')->result();
+        return  $this->db->get('web_blog')->result();
     }
 
     public function cek_url($url)
@@ -27,7 +27,7 @@ class User_m extends CI_Model
 
         $this->db->where('url', $url);
         $this->db->limit(1);
-        $query = $this->db->get('blog');
+        $query = $this->db->get('web_blog');
 
         if ($query->num_rows() == 1) {
             return $query->row();
@@ -38,7 +38,7 @@ class User_m extends CI_Model
     public function hitung_berita()
     {
         $this->db->select_sum('id_berita');
-        $query = $this->db->get('blog');
+        $query = $this->db->get('web_blog');
         if ($query->num_rows() > 0) {
             return $query->row()->id_berita;
         } else {

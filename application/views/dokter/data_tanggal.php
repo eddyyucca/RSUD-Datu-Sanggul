@@ -46,7 +46,7 @@
                                                         <td> <?= $hari->nm_dokter ?>
                                                             <a href="<?= base_url('dokter/edit_dokter/') . $hari->id_jadwal_dokter; ?>">
                                                                 <i class="far fa-edit"></i> </a>|
-                                                            <a style="color:red" href="<?= base_url('dokter/edit_dokter/') . $hari->id_jadwal_dokter; ?>" onclick="return confirm('Yakin Hapus?')"><i class="fas fa-user-minus"></i></a>
+                                                            <a style="color:red" href="<?= base_url('dokter/hapus_dokter/') . $hari->id_jadwal_dokter; ?>" onclick="return confirm('Yakin Hapus?')"><i class="fas fa-user-minus"></i></a>
                                                             </a>
                                                         </td>
                                                 <?php }
@@ -57,7 +57,8 @@
                                 </td>
                                 <td align="center">
                                     <a href="<?= base_url('dokter/tambah_dokter/') . $x->id_tgl_dokter; ?>" class="btn btn-primary"><i class="fas fa-user-edit"></i>Tambah Dokter</a>
-                                    <a href="<?= base_url('dokter/edit/') . $x->id_tgl_dokter; ?>" onclick="return confirm('Yakin Hapus?')" class="btn btn-danger"><i class="far fa-edit"></i> Ubah</a>
+                                    <a href="<?= base_url('dokter/edit_tanggal_dokter/') . $x->id_tgl_dokter; ?>" onclick="return confirm('Yakin Melakukan Edit?')" class="btn btn-success"><i class="far fa-edit"></i> Ubah</a>
+                                    <a href="<?= base_url('dokter/hapus_tanggal_dokter/') . $x->id_tgl_dokter; ?>" onclick="return confirm('Yakin Hapus?')" class="btn btn-danger"><i class="far fa-edit"></i>Hapus</a>
                                 </td>
                             </tr>
                         <?php } ?>
