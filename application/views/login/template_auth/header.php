@@ -89,7 +89,7 @@
                             <li class="nav-item"><a class="nav-link" href="<?= base_url(''); ?>/Startup_group" style="color:white">Info Kamar </a>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="<?= base_url('blog'); ?>" style="color:white">Artikel</a></li>
-                            <a class="btn font-weight-500 ml-lg-4 btn-teal" href="<?= base_url('Login'); ?>"><b>Login</b> <i class="ml-2" data-feather="arrow-right"></i></a>
+                            <a class="btn font-weight-500 ml-lg-4 btn-teal" href="<?= base_url('login'); ?>"><b>Login</b> <i class="ml-2" data-feather="arrow-right"></i></a>
                         </ul>
                         <!-- <i class="btn btn-outline-white px-4 ml-lg-4" href="#">Daftar Rawat Jalan<i class="fas fa-arrow-right ml-1"></i></a> -->
                     </div>

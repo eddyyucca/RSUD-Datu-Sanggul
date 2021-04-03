@@ -70,6 +70,19 @@
             </div>
           </div>
         </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#permintaan" aria-expanded="true" aria-controls="permintaan">
+            <i class="fas fa-database"></i>
+            <span>Akun Login</span>
+          </a>
+          <div id="permintaan" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="<?= base_url('admin/permintaan_kerja') ?>">Permintaan baru</a>
+              <a class="collapse-item" href="<?= base_url('admin/data_permintaan') ?>">Data Permintaan</a>
+              <a class="collapse-item" href="<?= base_url('admin/petugas_simrs') ?>">Petugas SIMRS</a>
+            </div>
+          </div>
+        </li>
 
 
 
