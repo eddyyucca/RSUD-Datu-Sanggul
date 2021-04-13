@@ -17,6 +17,8 @@
                                         <!-- <h1 class="h4 text-gray-900 mb-4">Login</h1> -->
                                     </div>
                                     <?php
+                                    $this->session->flashdata('pesan_kembali');
+                                    echo  $this->session->flashdata('pesan_kembali');
                                     echo $data;
                                     ?>
                                     <?= validation_errors() ?>
@@ -25,9 +27,7 @@
                                             <select class="form-control" name="level">
                                                 <option value="">--PILIH--</option>
                                                 <option value="Admin">ADMIN</option>
-                                                <option value="Derektur">DEREKTUR</option>
-                                                <option value="Dokter">DOKTER</option>
-                                                <option value="Kepegawaian">KEPEGAWAIAN</option>
+                                                <option value="yanmed">Pelayanan Medik</option>
                                             </select>
                                         </div>
                                         <div class="form-group mb-4">

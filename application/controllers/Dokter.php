@@ -9,7 +9,12 @@ class Dokter extends CI_Controller
         $this->load->model('home_m');
         $this->load->model('dokter_m');
         $this->load->library('form_validation');
-        // $this->load->model('');
+
+        $level_akun = $this->session->userdata('level');
+        if ($level_akun != "yanmed") {
+            $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
+            redirect('login');
+        }
     }
 
     public function index()

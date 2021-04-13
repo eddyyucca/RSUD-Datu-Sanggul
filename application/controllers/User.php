@@ -10,6 +10,11 @@ class User extends CI_Controller
         $this->load->model('user_m');
         $this->load->library('form_validation');
         $this->load->helper(array('form', 'url'));
+        $level_akun = $this->session->userdata('level');
+        if ($level_akun != "user") {
+            $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
+            redirect('login');
+        }
     }
 
     public function index()
@@ -76,7 +81,7 @@ class User extends CI_Controller
     //         $this->load->view('user/templates/footer');
     //     }
     // }
-    public function post()
+    public function post_baru()
     {
         $this->form_validation->set_rules('judul_berita', 'Judul berita', 'required');
         $this->form_validation->set_rules('isi_berita', 'Isi Berita', 'required');

@@ -28,7 +28,7 @@
       <!-- Sidebar -->
       <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('dokter') ?>">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('admin') ?>">
           <div class="sidebar-brand-icon">
             <img src="<?= base_url('assets/img/rsud_datu_sanggul.png'); ?>" width="50" height="50" alt="RSUD Datu Sanggul">
           </div>
@@ -48,12 +48,14 @@
         <li class="nav-item">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#data" aria-expanded="true" aria-controls="data">
             <i class="fas fa-database"></i>
-            <span>Dokter</span>
+            <span>Profil RSUD</span>
           </a>
           <div id="data" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="<?= base_url('admin/akun_dokter') ?>">Akun Dokter</a>
-              <a class="collapse-item" href="<?= base_url('admin/cek_akun_dokter') ?>">Cek Akun Dokter</a>
+              <a class="collapse-item" href="<?= base_url('admin/akun_dokter') ?>">Sejarah</a>
+              <a class="collapse-item" href="<?= base_url('admin/akun_dokter') ?>">Moto</a>
+              <a class="collapse-item" href="<?= base_url('admin/akun_dokter') ?>">Visi</a>
+              <a class="collapse-item" href="<?= base_url('admin/cek_akun_dokter') ?>">Misi</a>
             </div>
           </div>
         </li>
@@ -71,21 +73,16 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#permintaan" aria-expanded="true" aria-controls="permintaan">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#akun_login" aria-expanded="true" aria-controls="akun_login">
             <i class="fas fa-database"></i>
             <span>Akun Login</span>
           </a>
-          <div id="permintaan" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div id="akun_login" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="<?= base_url('admin/permintaan_kerja') ?>">Permintaan baru</a>
-              <a class="collapse-item" href="<?= base_url('admin/data_permintaan') ?>">Data Permintaan</a>
-              <a class="collapse-item" href="<?= base_url('admin/petugas_simrs') ?>">Petugas SIMRS</a>
+              <a class="collapse-item" href="<?= base_url('admin/akun') ?>">Data Login</a>
             </div>
           </div>
         </li>
-
-
-
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
         <!-- Divider -->
@@ -93,7 +90,6 @@
         <div class="text-center d-none d-md-inline">
           <button class="rounded-circle border-0" id="sidebarToggle"></button>
         </div>
-
       </ul>
       <!-- End of Sidebar -->
       <!-- Content Wrapper -->

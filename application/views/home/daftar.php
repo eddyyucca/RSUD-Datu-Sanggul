@@ -63,19 +63,3 @@
         </div>
     </div>
 </header>
-
-<section class="bg-light py-10">
-    <div class="container">
-        <div class="d-flex align-items-center justify-content-between mb-4">
-            <h2 class="mb-0">Pendaftaran Antrian Online</h2>
-        </div>
-    </div>
-</section>
-<section class="bg-img-cover overlay overlay-light overlay-80 py-15" style='background-image: url("<?= base_url("assets/img/ruangbedah.jpg") ?>"); background-attachment:fixed;'>
-    <div class="container z-1">
-        <div class="mt-5">
-            <div class="display-4 mb-3 text-dark">Siap menjadi klien kami?</div>
-            <a class="btn btn-outline-orange btn-marketing " href="#!">Hubungi Kami</a>
-        </div>
-    </div>
-</section>

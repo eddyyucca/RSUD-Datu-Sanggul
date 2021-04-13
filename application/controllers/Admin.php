@@ -13,7 +13,11 @@ class Admin extends CI_Controller
         $this->load->model('dokter_m');
         $this->load->model('admin_m');
         $this->load->library('form_validation');
-        // $this->load->model('');
+        $level_akun = $this->session->userdata('level');
+        if ($level_akun != "admin") {
+            $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
+            redirect('login');
+        }
     }
 
     public function index()
@@ -111,56 +115,42 @@ class Admin extends CI_Controller
     // akun Login
     public function akun()
     {
-        $data['judul'] = "User";
-        $data['alerts'] = $this->order_model->getDataJoin();
-        $data['alerts_3'] = $this->order_model->alerts_3();
-        $data['departemen'] = $this->akun_model->getByRoleId();
-        $data['nama'] = $this->session->userdata('nama_user');
         $data['level_akun'] = $this->session->userdata('level');
+        $data['nama'] = 'dr. Eddy Adha Saputra';
+        $data['data'] = $this->admin_m->data_login();;
 
-        $this->load->view('template/header', $data);
-        $this->load->view('akun/index', $data);
-        $this->load->view('template/footer');
+        $this->load->view('admin/template_admin/header', $data);
+        $this->load->view('admin/user/data_user', $data);
+        $this->load->view('admin/template_admin/footer');
     }
 
-    public function input()
+    public function tambah_akun()
     {
-        $data['judul'] = "Tambah User";
-        $data['alerts'] = $this->order_model->getDataJoin();
-        $data['alerts_3'] = $this->order_model->alerts_3();
-        $data['data_departemen'] = $this->akun_model->getDataDepartemen();
         $data['nama'] = $this->session->userdata('nama_user');
         $data['level_akun'] = $this->session->userdata('level');
-
-        $this->load->view('template/header', $data);
-        $this->load->view('akun/input', $data);
-        $this->load->view('template/footer');
+        $this->load->view('admin/template_admin/header', $data);
+        $this->load->view('admin/user/tambah_user', $data);
+        $this->load->view('admin/template_admin/footer');
     }
 
-    public function edit($id)
+    public function edit_akun($id)
     {
-        $data['judul'] = "Edit User";
-        $data['alerts'] = $this->order_model->getDataJoin();
-        $data['alerts_3'] = $this->order_model->alerts_3();
-        $data['data_departemen'] = $this->akun_model->getDataDepartemen();
+        var_dump(md5($id));
         $data['nama'] = $this->session->userdata('nama_user');
-        $data['data'] = $this->akun_model->getId($id);
         $data['level_akun'] = $this->session->userdata('level');
-
-        $this->load->view('template/header', $data);
-        $this->load->view('akun/edit', $data);
-        $this->load->view('template/footer');
+        $this->load->view('admin/template_admin/header', $data);
+        $this->load->view('admin/user/edit_user', $data);
+        $this->load->view('admin/template_admin/footer');
     }
 
     public function prosesEdit($id)
     {
-        $this->form_validation->set_rules('nama_user', 'Username', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
-        $this->form_validation->set_rules('id_dep', 'Departemen', 'required');
         $this->form_validation->set_rules('level', 'Level', 'required');
 
         if ($this->form_validation->run() == FALSE) {
-            $this->edit($id);
+            $this->edit_akun($id);
         } else {
             $data = array(
                 'nama_user' => $this->input->post('nama_user'),
@@ -168,32 +158,28 @@ class Admin extends CI_Controller
                 'id_dep' => $this->input->post('id_dep'),
                 'level' => $this->input->post('level'),
             );
-
-            $update = $this->akun_model->update($data, $id);
-            redirect('akun');
+            $this->db->insert('web_login', $data);
+            redirect('admin/akun');
         }
     }
 
-    public function prosesInput()
+    public function prosestambah_akun()
     {
-        $this->form_validation->set_rules('nama_user', 'Username', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
-        $this->form_validation->set_rules('id_dep', 'Departemen', 'required');
         $this->form_validation->set_rules('level', 'Level', 'required');
 
         if ($this->form_validation->run() == FALSE) {
-            $this->input();
+            $this->tambah_akun();
         } else {
             $data = array(
-                'nama_user' => $this->input->post('nama_user'),
+                'username' => $this->input->post('username'),
                 'password' => md5($this->input->post('password')),
-                'id_dep' => $this->input->post('id_dep'),
                 'level' => $this->input->post('level'),
             );
 
-
-            $input = $this->akun_model->insertUser($data);
-            redirect('akun');
+            $this->db->insert('web_login', $data);
+            redirect('admin/akun');
         }
     }
 

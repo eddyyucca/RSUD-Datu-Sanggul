@@ -46,12 +46,6 @@ class Login_m extends CI_Model
         }
     }
 
-    public function departemen()
-    {
-        $this->db->order_by('nama_dep', 'ASC');
-        $query = $this->db->get('departemen');
-        return $query->result();
-    }
 
     public function auth_vendor($username, $password)
     {

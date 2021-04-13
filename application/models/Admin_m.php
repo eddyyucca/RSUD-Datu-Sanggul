@@ -14,6 +14,11 @@ class Admin_m extends CI_Model
         $this->db->where('id_petugas_simrs', $id_petugas);
         return $this->db->get('petugas_simrs')->row();
     }
+
+    public function data_login()
+    {
+        return $this->db->get('web_login')->result();
+    }
 }
 
 /* End of file Admin_m.php */

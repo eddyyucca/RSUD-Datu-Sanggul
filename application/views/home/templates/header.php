@@ -78,18 +78,9 @@
                                             Jadwal dokter dan info poliklinik
                                         </div>
                                     </a>
-                                    <div class="dropdown-divider m-0"></div>
-                                    <a class="dropdown-item py-3" href="<?= base_url('info_dokter'); ?>">
-                                        <div class="icon-stack bg-primary-soft text-primary mr-4"><i data-feather="code"></i></div>
-                                        <div>
-                                            <div class="small">IGD</div>
-                                            Jadwal dokter dan info IGD
-                                        </div>
-                                    </a>
-                                    <div class="dropdown-divider m-0"></div>
                                 </div>
                             </li>
-                            <li class="nav-item dropdown no-caret">
+                            <!-- <li class="nav-item dropdown no-caret">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">Profil Rumah Sakit<i class="fas fa-chevron-right dropdown-arrow"></i></a>
                                 <div class="dropdown-menu dropdown-menu-right animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
                                     <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-ui-kit-pro/quickstart" target="_blank">
@@ -109,10 +100,10 @@
                                     </a>
                                     <div class="dropdown-divider m-0"></div>
                                 </div>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="<?= base_url(''); ?>/Startup_group" style="color:white">Info Kamar </a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="<?= base_url('blog'); ?>" style="color:white">Artikel</a></li>
+                            </li> -->
+                            <!-- <li class="nav-item"><a class="nav-link" href="<?= base_url(''); ?>/Startup_group" style="color:white">Info Kamar </a>
+                            </li> -->
+                            <!-- <li class="nav-item"><a class="nav-link" href="<?= base_url('blog'); ?>" style="color:white">Artikel</a></li> -->
                             <a class="btn font-weight-500 ml-lg-4 btn-teal" href="<?= base_url('login'); ?>"><b>Login</b> <i class="ml-2" data-feather="arrow-right"></i></a>
                         </ul>
                         <!-- <i class="btn btn-outline-white px-4 ml-lg-4" href="#">Daftar Rawat Jalan<i class="fas fa-arrow-right ml-1"></i></a> -->
