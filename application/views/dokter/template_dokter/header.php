@@ -55,7 +55,7 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('dokter') ?>">
           <div class="sidebar-brand-icon">
-            <img src="<?= base_url('assets/img/rsud_datu_sanggul.png'); ?>" width="50" height="50" alt="RSUD Datu Sanggul">
+            <img src="<?= base_url('assets/img/rsud_datu_sanggul.png'); ?>" width="50" height="60" alt="RSUD Datu Sanggul">
           </div>
           <div class="sidebar-brand-text mx-3">RSUD Datu Sanggul</div>
         </a>

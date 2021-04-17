@@ -19,9 +19,14 @@ class Dokter extends CI_Controller
 
     public function index()
     {
-        $data['nama'] = 'dr. Eddy Adha Saputra';
+        $data['nama'] = $this->session->userdata('username');
         $data['judul'] = 'dr. Eddy Adha Saputra';
-        $data['data'] = $this->dokter_m->dokter_row();
+        // $data['data'] = $this->dokter_m->dokter_row();
+
+        $data['data'] = $this->home_m->dokter();
+        $data['hari_dokter'] = $this->dokter_m->hari_dokter();
+        $data['data'] = $this->dokter_m->tanggal_dokter();
+
         $this->load->view('dokter/template_dokter/header', $data);
         $this->load->view('dokter/dashboard', $data);
         $this->load->view('dokter/template_dokter/footer');

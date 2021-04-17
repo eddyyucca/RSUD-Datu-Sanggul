@@ -17,7 +17,7 @@
                                         <!-- <h1 class="h4 text-gray-900 mb-4">Login</h1> -->
                                     </div>
                                     <?php
-                                    $this->session->flashdata('pesan_kembali');
+                                
                                     echo  $this->session->flashdata('pesan_kembali');
                                     echo $data;
                                     ?>

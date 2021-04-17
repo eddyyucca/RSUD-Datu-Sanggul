@@ -10,7 +10,7 @@
                 <a class="btn btn-danger disabled" href="<?= base_url('hr/laporan_pdf') ?>">Print PDF</a>
                 <a class="btn btn-success disabled" href="<?= base_url('hr/laporan_excel') ?>">Print Excel</a>
                 <hr>
-                <?= $this->session->flashdata('tambah_karyawan'); ?>
+                <?= $this->session->flashdata('notif', 'refresh'); ?>
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
@@ -29,7 +29,7 @@
                                     <td align="center"><?= $no++ ?></td>
                                     <td><?= $x->username ?></td>
                                     <td><?= $x->level ?></td>
-                                    <td>
+                                    <td align="center">
                                         <a href="<?= base_url('admin/reset_pass/') . $x->id_login; ?>" class="btn btn-secondary">Reset</i></a>
                                         <a href="<?= base_url('admin/edit_akun/') . $x->id_login; ?>" class="btn btn-secondary">Ubah</i></a>
                                     </td>

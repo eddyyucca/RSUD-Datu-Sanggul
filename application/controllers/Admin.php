@@ -14,10 +14,10 @@ class Admin extends CI_Controller
         $this->load->model('admin_m');
         $this->load->library('form_validation');
         $level_akun = $this->session->userdata('level');
-        if ($level_akun != "admin") {
-            $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
-            redirect('login');
-        }
+        // if ($level_akun != "admin") {
+        //     $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
+        //     redirect('login');
+        // }
     }
 
     public function index()
@@ -201,6 +201,16 @@ class Admin extends CI_Controller
         $this->load->view('admin/template_admin/header', $data);
         $this->load->view('admin/user/tambah_user', $data);
         $this->load->view('admin/template_admin/footer');
+    }
+    public function reset_pass($id_login)
+    {
+        $data = array(
+            'password' => md5("12345678"),
+        );
+        $this->db->where('id_login', $id_login);
+        $this->db->update('web_login', $data);
+        $this->session->set_Flashdata('notif', "<div class='alert alert-success' role='alert'>Reset Password Berhasil</div>");
+        redirect('admin/akun');
     }
     // user
 }
