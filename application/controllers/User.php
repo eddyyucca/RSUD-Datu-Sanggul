@@ -11,10 +11,10 @@ class User extends CI_Controller
         $this->load->library('form_validation');
         $this->load->helper(array('form', 'url'));
         $level_akun = $this->session->userdata('level');
-        if ($level_akun != "user") {
-            $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
-            redirect('login');
-        }
+        // if ($level_akun != "user") {
+        //     $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
+        //     redirect('login');
+        // }
     }
 
     public function index()
@@ -107,7 +107,7 @@ class User extends CI_Controller
             // script upload file 1
             $this->upload->do_upload('foto');
             $x = $this->upload->data();
-            var_dump($x);
+
             $data = array(
                 'url' => $url_berita,
                 'judul_berita' => $this->input->post('judul_berita'),

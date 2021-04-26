@@ -11,8 +11,7 @@
             <div class="card">
                 <div class="card-header">Post Baru</div>
                 <div class="card-body">
-
-                    <form action="<?= base_url('user/post') ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url('user/post_baru') ?>" method="post" enctype="multipart/form-data">
                         <script>
                             function readURL(input) {
                                 if (input.files && input.files[0]) {
