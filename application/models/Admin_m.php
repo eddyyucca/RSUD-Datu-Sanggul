@@ -19,6 +19,11 @@ class Admin_m extends CI_Model
     {
         return $this->db->get('web_login')->result();
     }
+    public function data_login_row($id_login)
+    {
+        $this->db->where('id_login', $id_login);
+        return $this->db->get('web_login')->row();
+    }
 }
 
 /* End of file Admin_m.php */

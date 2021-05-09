@@ -13,6 +13,7 @@ class Admin extends CI_Controller
         $this->load->model('dokter_m');
         $this->load->model('admin_m');
         $this->load->library('form_validation');
+        $this->load->library('encryption');
         $level_akun = $this->session->userdata('level');
         // if ($level_akun != "admin") {
         //     $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
@@ -135,9 +136,10 @@ class Admin extends CI_Controller
 
     public function edit_akun($id)
     {
-        var_dump(md5($id));
+        $id_login = $this->encryption->decrypt($id);
+        $data['akun'] = $this->admin_m->data_login_row($id_login);
         $data['nama'] = $this->session->userdata('nama_user');
-        $data['level_akun'] = $this->session->userdata('level');
+        // $data['level_akun'] = $this->session->userdata('level');
         $this->load->view('admin/template_admin/header', $data);
         $this->load->view('admin/user/edit_user', $data);
         $this->load->view('admin/template_admin/footer');
@@ -145,7 +147,7 @@ class Admin extends CI_Controller
 
     public function prosesEdit($id)
     {
-        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'requiredrequired|is_unique[web_login.username]');
         $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_rules('level', 'Level', 'required');
 
@@ -165,7 +167,7 @@ class Admin extends CI_Controller
 
     public function prosestambah_akun()
     {
-        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required|is_unique[web_login.username]');
         $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_rules('level', 'Level', 'required');
 

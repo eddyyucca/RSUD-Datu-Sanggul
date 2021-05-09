@@ -136,6 +136,15 @@ class User extends CI_Controller
         $this->load->view('user/post/index', $data);
         $this->load->view('user/templates/footer');
     }
+    public function lihat_berita()
+    {
+        $data['judul'] = "Dashboard";
+        $data['nama'] = "Eddy Adha Saputra";
+        $data['data_berita'] = $this->user_m->post_berita();
+        $this->load->view('user/templates/header', $data);
+        $this->load->view('user/post/index', $data);
+        $this->load->view('user/templates/footer');
+    }
 }
 
 /* End of file user.php */

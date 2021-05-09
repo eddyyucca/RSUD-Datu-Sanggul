@@ -2,7 +2,7 @@
     <div class="row">
         <?php foreach ($data_berita as $berita) { ?>
             <div class="col-md-6 col-xl-4 mb-5">
-                <a class="card post-preview lift h-100" href="<?= $berita->url ?>"><img class="card-img-top" src="<?= base_url('assets/foto_berita/' . $berita->foto_berita) ?>" alt="..." />
+                <a class="card post-preview lift h-100" href="<?= base_url('lihat_berita/') . $berita->url ?>"><img class="card-img-top" src="<?= base_url('assets/foto_berita/' . $berita->foto_berita) ?>" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title"><?= $berita->judul_berita ?></h5>
                     </div>

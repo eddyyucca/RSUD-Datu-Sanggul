@@ -1,10 +1,3 @@
-<!-- <style>
-    img {
-        width: auto;
-        height: auto;
-    }
-</style> -->
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">

@@ -35,6 +35,16 @@ class Home_m extends CI_Model
     {
         return $this->db->get('poliklinik')->result();
     }
+    public function post_berita()
+    {
+        $this->db->order_by('id_berita', 'DESC');
+        return  $this->db->get('web_blog')->result();
+    }
+    public function kepala_berita()
+    {
+        $this->db->order_by('id_berita', 'DESC');
+        return  $this->db->get('web_blog')->row();
+    }
 }
 
 /* End of file Admin_model.php */

@@ -11,7 +11,7 @@
                         <form action="<?= base_url('akun/prosesInput') ?>" method="POST">
                             <div class="form-group">
                                 <label for="inputItem">Username</label>
-                                <input type="text" class="form-control" id="nama_user" name="nama_user" placeholder="Username">
+                                <input type="text" class="form-control" id="nama_user" name="nama_user" placeholder="Username" value="<?= $akun->username ?>">
                             </div>
                             <div class="form-group">
                                 <label for="inputItem">Password</label>
