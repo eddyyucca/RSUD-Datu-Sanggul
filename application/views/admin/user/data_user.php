@@ -30,8 +30,8 @@
                                     <td><?= $x->username ?></td>
                                     <td><?= $x->level ?></td>
                                     <td align="center">
-                                        <a href="<?= base_url('admin/reset_pass/') . $this->encryption->encrypt($x->id_login); ?>" class="btn btn-secondary">Reset</i></a>
-                                        <a href="<?= base_url('admin/edit_akun/') . $this->encryption->encrypt($x->id_login); ?>" class="btn btn-secondary">Ubah</i></a>
+                                        <a href="<?= base_url('admin/reset_pass/') . $x->id_login; ?>" class="btn btn-secondary">Reset</i></a>
+                                        <a href="<?= base_url('admin/edit_akun/') . $x->id_login; ?>" class="btn btn-secondary">Ubah</i></a>
                                     </td>
                             </tr>
                         <?php } ?>

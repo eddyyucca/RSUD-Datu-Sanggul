@@ -156,7 +156,7 @@ class Dokter extends CI_Controller
 
             $this->db->where('id_tgl_dokter', $id_tgl_dokter);
             $this->db->update('web_tanggal_dokter', $data);
-            return redirect('dokter/tanggal_dokter');
+            return redirect('dokter/data_tanggal');
         }
     }
 

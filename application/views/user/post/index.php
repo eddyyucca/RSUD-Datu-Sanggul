@@ -6,13 +6,6 @@
                     <div class="card-body">
                         <h5 class="card-title"><?= $berita->judul_berita ?></h5>
                     </div>
-                    <div class="card-footer">
-                        <div class="post-preview-meta">
-                            <div class="post-preview-meta-details">
-                                <div class="post-preview-meta-details-date"><?= $berita->date_berita ?></div>
-                            </div>
-                        </div>
-                    </div>
                 </a>
             </div>
         <?php } ?>

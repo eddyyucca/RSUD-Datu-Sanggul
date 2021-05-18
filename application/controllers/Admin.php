@@ -13,7 +13,7 @@ class Admin extends CI_Controller
         $this->load->model('dokter_m');
         $this->load->model('admin_m');
         $this->load->library('form_validation');
-        $this->load->library('encryption');
+        // $this->load->library('encryption');
         $level_akun = $this->session->userdata('level');
         // if ($level_akun != "admin") {
         //     $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
@@ -134,9 +134,9 @@ class Admin extends CI_Controller
         $this->load->view('admin/template_admin/footer');
     }
 
-    public function edit_akun($id)
+    public function edit_akun($id_login)
     {
-        $id_login = $this->encryption->decrypt($id);
+
         $data['akun'] = $this->admin_m->data_login_row($id_login);
         $data['nama'] = $this->session->userdata('nama_user');
         // $data['level_akun'] = $this->session->userdata('level');
