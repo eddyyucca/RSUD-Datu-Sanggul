@@ -15,10 +15,10 @@ class Admin extends CI_Controller
         $this->load->library('form_validation');
         // $this->load->library('encryption');
         $level_akun = $this->session->userdata('level');
-        // if ($level_akun != "admin") {
-        //     $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
-        //     redirect('login');
-        // }
+        if ($level_akun != "admin") {
+            $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
+            redirect('login');
+        }
     }
 
     public function index()
@@ -145,22 +145,23 @@ class Admin extends CI_Controller
         $this->load->view('admin/template_admin/footer');
     }
 
-    public function prosesEdit($id)
+    public function prosesedit($id_login)
     {
-        $this->form_validation->set_rules('username', 'Username', 'requiredrequired|is_unique[web_login.username]');
+        $this->form_validation->set_rules('username', 'Username', 'required|is_unique[web_login.username]');
         $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_rules('level', 'Level', 'required');
 
         if ($this->form_validation->run() == FALSE) {
-            $this->edit_akun($id);
+            $this->edit_akun($id_login);
         } else {
             $data = array(
-                'nama_user' => $this->input->post('nama_user'),
+                'username' => $this->input->post('username'),
                 'password' => md5($this->input->post('password')),
                 'id_dep' => $this->input->post('id_dep'),
                 'level' => $this->input->post('level'),
             );
-            $this->db->insert('web_login', $data);
+            $this->db->where('id_login', $id_login);
+            $this->db->update('web_login', $data);
             redirect('admin/akun');
         }
     }

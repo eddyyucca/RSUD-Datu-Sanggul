@@ -21,6 +21,7 @@ class Pendaftaran extends CI_Controller
     public function data_pasien()
     {
         $ttl_1 = $this->input->post('ttl');
+        $no_ktp = $this->input->post('no_ktp');
         $rm = $this->input->post('rm');
 
         $tahun = substr($ttl_1, 0, 4);
@@ -28,7 +29,7 @@ class Pendaftaran extends CI_Controller
         $tgl = substr($ttl_1, 8, 2);
 
         $tanggal = $tahun . "-" . $bulan . "-" . $tgl;
-        $data['data_pasien'] = $this->home_m->get_user_row($rm, $tanggal);
+        $data['data_pasien'] = $this->home_m->get_user_row($no_ktp, $rm, $tanggal);
         $data['poli'] = $this->input->post('poli');
         $data['poliklinik'] = $this->home_m->poliklinik();
         $this->load->view('home/templates/header');
@@ -38,6 +39,7 @@ class Pendaftaran extends CI_Controller
 
     public function daftar()
     {
+
         $tgl = $this->input->post('tgl_berobat');
 
         $rm = $this->input->post('rm');
@@ -52,7 +54,7 @@ class Pendaftaran extends CI_Controller
             if (date("H") < "11") {
                 $data['data_pasien'] = $this->home_m->get_pasien_row($rm);
                 $data['tgl_berobat'] = longdate_indo($tanggal);
-                $str = file_get_contents('http://192.168.11.73:8081/qumatic/standard/api/intkiosk?id=0&date=' . $tanggal);
+                $str = file_get_contents('http://192.168.66.10:8081/qumatic/standard/api/intkiosk?id=0&date=' . $tanggal);
                 $json = json_decode($str, true);
                 $data['noantri'] = $json['data'];
                 $data['poli'] = $this->input->post('poli');
@@ -72,7 +74,7 @@ class Pendaftaran extends CI_Controller
         } elseif ($result_tgl > date("Ymd")) {
             $data['data_pasien'] = $this->home_m->get_pasien_row($rm);
             $data['tgl_berobat'] = longdate_indo($tanggal);
-            $str = file_get_contents('http://192.168.11.73:8081/qumatic/standard/api/intkiosk?id=0&date=' . $tanggal);
+            $str = file_get_contents('http://192.168.66.10:8081/qumatic/standard/api/intkiosk?id=0&date=' . $tanggal);
             $json = json_decode($str, true);
             $data['noantri'] = $json['data'];
             $data['poli'] = $this->input->post('poli');

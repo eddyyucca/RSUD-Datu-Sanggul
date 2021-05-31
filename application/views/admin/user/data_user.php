@@ -10,7 +10,12 @@
                 <a class="btn btn-danger disabled" href="<?= base_url('hr/laporan_pdf') ?>">Print PDF</a>
                 <a class="btn btn-success disabled" href="<?= base_url('hr/laporan_excel') ?>">Print Excel</a>
                 <hr>
-                <?= $this->session->flashdata('notif', 'refresh'); ?>
+
+                <?php if ($this->session->flashdata('notif', 'refresh') == true) { ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?= $this->session->flashdata('notif', 'refresh') ?>
+                    </div>
+                <?php  } ?>
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>

@@ -11,10 +11,10 @@ class User extends CI_Controller
         $this->load->library('form_validation');
         $this->load->helper(array('form', 'url'));
         $level_akun = $this->session->userdata('level');
-        // if ($level_akun != "user") {
-        //     $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
-        //     redirect('login');
-        // }
+        if ($level_akun != "user") {
+            $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
+            redirect('login');
+        }
     }
 
     public function index()

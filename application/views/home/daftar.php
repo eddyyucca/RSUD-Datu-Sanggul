@@ -21,6 +21,11 @@
                                     <td><?= $data_pasien->no_rkm_medis ?></td>
                                 </tr>
                                 <tr>
+                                    <td>Nomor Induk Kependudukan</td>
+                                    <td>:</td>
+                                    <td><?= $data_pasien->no_ktp ?></td>
+                                </tr>
+                                <tr>
                                     <td>Tanggal Lahir</td>
                                     <td>:</td>
                                     <td><?= $data_pasien->tgl_lahir ?></td>

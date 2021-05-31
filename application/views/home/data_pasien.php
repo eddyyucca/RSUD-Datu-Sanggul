@@ -20,6 +20,11 @@
                                     <td><?= $data_pasien->no_rkm_medis ?></td>
                                 </tr>
                                 <tr>
+                                    <td>Nomor Induk Kependudukan</td>
+                                    <td>:</td>
+                                    <td><?= $data_pasien->no_ktp ?></td>
+                                </tr>
+                                <tr>
                                     <td>Tanggal Lahir</td>
                                     <td>:</td>
                                     <td><?= $data_pasien->tgl_lahir ?></td>
@@ -60,13 +65,13 @@
                         <?php  } elseif ($data_pasien == false) { ?>
                             <div class="text-center">
                                 <div class='alert alert-danger' role='alert'>
-                                    <h1>Data Tidak Ditemukan !</h1>
+                                    <h1>Data Tidak Ditemukan ! <br><br>
+                                        Silahkan lengkapi Data Anda Di Loket Pendaftaran
+                                    </h1>
                                 </div>
                                 <a href="<?= base_url('pendaftaran') ?>" class="btn btn-success">Kembali Lakukan Pendaftaran</a>
                             </div>
-
                     </div>
-
                 <?php } ?>
                 </div>
             </div>

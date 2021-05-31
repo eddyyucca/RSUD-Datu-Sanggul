@@ -11,10 +11,10 @@ class Dokter extends CI_Controller
         $this->load->library('form_validation');
 
         $level_akun = $this->session->userdata('level');
-        // if ($level_akun != "yanmed") {
-        //     $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
-        //     redirect('login');
-        // }
+        if ($level_akun != "yanmed") {
+            $this->session->set_Flashdata('pesan_kembali', "<div class='alert alert-danger' role='alert'>Anda harus login terlebih dahulu ! </div>");
+            redirect('login');
+        }
     }
 
     public function index()
@@ -129,7 +129,7 @@ class Dokter extends CI_Controller
                 'poli' => $this->input->post('poli'),
             );
             $this->db->insert('web_tanggal_dokter', $data);
-            return redirect('dokter/tanggal_dokter');
+            return redirect('dokter/data_tanggal');
         }
     }
 

@@ -9,14 +9,14 @@ class Home_m extends CI_Model
         return $this->db->get('dokter')->result();
     }
 
-    public function get_user_row($rm, $tanggal)
+    public function get_user_row($no_ktp, $rm,  $tanggal)
     {
 
+        $this->db->where('no_ktp', $no_ktp);
         $this->db->where('no_rkm_medis', $rm);
         $this->db->where('tgl_lahir', $tanggal);
         $this->db->limit(1);
         $query = $this->db->get('pasien');
-
         if ($query->num_rows() == 1) {
             return $query->row();
         } elseif ($query->num_rows() == 0) {

@@ -17,6 +17,10 @@
                                 <input type="number" class="form-control" required id="no_rm" name="rm" placeholder="Nomor Rekam Medis">
                             </div>
                             <div class="form-group">
+                                <label for="no_ktp">Nomor Induk Kependudukan</label>
+                                <input type="text" class="form-control" required id="no_ktp" name="no_ktp" placeholder="Nomor Induk Kependudukan">
+                            </div>
+                            <div class="form-group">
                                 <label for="date">Tanggal Lahir</label>
                                 <input type="date" class="form-control" required name="ttl">
                             </div>
